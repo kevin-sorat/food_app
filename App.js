@@ -1,21 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { BottomNavigation, Text } from 'react-native-paper';
+import { getHomePage } from './pages/home.js';
+import { getMenuPage } from './pages/menu.js';
+import { getRewardsPage } from './pages/rewards.js';
+import { getMorePage } from './pages/more.js';
 
-export default function App() {
+const HomeRoute = () => getHomePage();
+const MenuRoute = () => getMenuPage();
+const RewardsRoute = () => getRewardsPage();
+const MoreRoute = () => getMorePage();
+
+const MainComponent = () => {
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'home', title: 'Home', icon: 'home' },
+    { key: 'menu', title: 'Menu', icon: 'food-fork-drink' },
+    { key: 'rewards', title: 'Rewards', icon: 'wallet-giftcard' },
+    { key: 'more', title: 'More', icon: 'dots-horizontal' },
+  ]);
+
+  const renderScene = BottomNavigation.SceneMap({
+    home: HomeRoute,
+    menu: MenuRoute,
+    rewards: RewardsRoute,
+    more: MoreRoute,
+  });
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <BottomNavigation
+      navigationState={{ index, routes }}
+      onIndexChange={setIndex}
+      renderScene={renderScene}
+    />
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default MainComponent;
