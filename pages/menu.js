@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal, Pressable } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { getDetailPage } from './detail.js';
 // import chicken from '../assets/800px_COLOURBOX9177179.jpeg';
