@@ -5,7 +5,7 @@ import { getMenuPage } from './pages/menu.js';
 import { getTranslatePage } from './pages/translate.js';
 import { getMorePage } from './pages/more.js';
 
-import * as Localization from 'expo-localization';
+// import * as Localization from 'expo-localization';
 import i18n from 'i18n-js';
 
 i18n.translations = {
@@ -18,8 +18,15 @@ i18n.fallbacks = true;
 
 const MainComponent = () => {
 
-  console.log("MainComponent: i18n.locale: " + i18n.locale);
-  console.log("MainComponent: i18n.t('home'): " + i18n.t('home'));
+  //console.log("MainComponent: i18n.locale: " + i18n.locale);
+  //console.log("MainComponent: i18n.t('home'): " + i18n.t('home'));
+
+  const navigationRoutes = [
+    { key: 'home', title: i18n.t('home'), icon: 'home' },
+    { key: 'menu', title: i18n.t('menu'), icon: 'food-fork-drink' },
+    { key: 'translate', title: i18n.t('translate'), icon: 'translate' },
+    { key: 'more', title: i18n.t('more'), icon: 'dots-horizontal' },
+  ];
 
   const HomeRoute = () => getHomePage();
   const MenuRoute = () => getMenuPage();
@@ -27,12 +34,7 @@ const MainComponent = () => {
   const MoreRoute = () => getMorePage();
 
   const [index, setIndex] = React.useState(0);
-  const [routes] = React.useState([
-    { key: 'home', title: i18n.t('home'), icon: 'home' },
-    { key: 'menu', title: i18n.t('menu'), icon: 'food-fork-drink' },
-    { key: 'translate', title: i18n.t('translate'), icon: 'translate' },
-    { key: 'more', title: i18n.t('more'), icon: 'dots-horizontal' },
-  ]);
+  const [routes, setRoutes] = React.useState(navigationRoutes);
 
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
@@ -41,10 +43,19 @@ const MainComponent = () => {
     more: MoreRoute,
   });
 
+  const _handleIndexChange = (value) => {
+    setIndex(value);
+  };
+
+  React.useEffect(() => {
+    setRoutes(navigationRoutes);
+    //console.log("MainComponent: routes[0].title: " + routes[0].title);
+  }, [i18n.locale]);
+
   return (
     <BottomNavigation
       navigationState={{ index, routes }}
-      onIndexChange={setIndex}
+      onIndexChange={_handleIndexChange}
       renderScene={renderScene}
     />
   );
