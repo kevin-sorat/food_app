@@ -4,13 +4,13 @@ import { getHomePage } from './pages/home.js';
 import { getMenuPage } from './pages/menu.js';
 import { getTranslatePage } from './pages/translate.js';
 import { getMorePage } from './pages/more.js';
-
-// import * as Localization from 'expo-localization';
+import * as Linking from 'expo-linking';
 import i18n from 'i18n-js';
 
 i18n.translations = {
   en: require('./nls/strings_en.json'),
   ja: require('./nls/strings_ja.json'),
+  th: require('./nls/strings_th.json'),
 };
 
 i18n.locale = "en"; // Localization.locale;
@@ -35,6 +35,7 @@ const MainComponent = () => {
 
   const [index, setIndex] = React.useState(0);
   const [routes, setRoutes] = React.useState(navigationRoutes);
+  const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.locale);
 
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
@@ -49,8 +50,20 @@ const MainComponent = () => {
 
   React.useEffect(() => {
     setRoutes(navigationRoutes);
-    //console.log("MainComponent: routes[0].title: " + routes[0].title);
   }, [i18n.locale]);
+
+  // listen for new url events coming from Expo
+  Linking.addEventListener('url', event => {
+    if (event.url) {
+      const parsedUrl = Linking.parse(event.url);
+      if (i18n.locale !== parsedUrl.queryParams.language) {
+        console.log("selectedLanguage: " + selectedLanguage);
+        console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
+        i18n.locale = parsedUrl.queryParams.language;
+        setSelectedLanguage(i18n.locale);
+      }
+    }
+  });
 
   return (
     <BottomNavigation

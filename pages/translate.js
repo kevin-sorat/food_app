@@ -28,15 +28,16 @@ export function getTranslatePage() {
                 style={{ width: 280, backgroundColor: '#e1e1e1' }}
                 selectedValue={highlightedLanguage}
                 onValueChange={(value) => _handleValueChange(value)}>
-            <Picker.Item label='Chinese' value='ch' />
+            <Picker.Item label='中文' value='ch' />
             <Picker.Item label='English' value='en' />
-            <Picker.Item label='Japanese' value='ja' />
-            <Picker.Item label='Korean' value='ko' />
-            <Picker.Item label='Spanish' value='es' />
-            <Picker.Item label='Thai' value='th' />
+            <Picker.Item label='日本語' value='ja' />
+            <Picker.Item label='朝鮮語' value='ko' />
+            <Picker.Item label='española' value='es' />
+            <Picker.Item label='ไทย' value='th' />
           </Picker>
           <View style={styles.toolbar}>
-            <Button style={styles.applyButton} title='Apply' onPress={_handlePressDone} />
+            <Button style={styles.applyButton} title={i18n.t('apply')} 
+                onPress={_handlePressDone} disabled={highlightedLanguage === selectedLanguage} />
           </View>
         </SafeAreaView>
     );

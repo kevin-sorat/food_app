@@ -1,0 +1,45 @@
+{
+    "home": "บ้าน",
+    "menu": "เมนู",
+    "translate": "แปล",
+    "more": "เพิ่มเติม",
+    "chickenValley": "หุบเขาไก่",
+    "pikePlaceMarket": "ตลาดไพค์เพลส",
+    "language": "ภาษา",
+    "apply": "สมัคร",
+
+    "chicken": "ไก่",
+    "drumStick": "น่อง",
+    "thigh": "สะโพก",
+    "wings": "ปีก",
+    "breast": "อก",
+    "strips": "แถบ",
+    "chickenStick": "ไก่แท่ง",
+    "spicyHotStick": "แท่งร้อนสไปซี่",
+    "chickenSpecial": "ไก่พิเศษ",
+
+    "chickenEtc": "ไก่ (อื่นๆ)",
+    "gizzards": "กึ๋น",
+    "livers": "ตับ",
+    "hearts": "หัวใจ",
+
+    "seafood": "อาหารทะเล",
+    "tempuraShrimps": "กุ้งเทมปุระ (5 ชิ้น)",
+    "butterflyShrimps": "กุ้งผีเสื้อ (5 ชิ้น)",
+    "codFish": "ปลาคอด (3 ชิ้น)",
+    "calamari": "ปลาคอด (3 ชิ้น)",
+    "addFries": "เพิ่มมันฝรั่งทอด",
+
+    "sideOrders": "คำสั่งด้านข้าง",
+    "frenchFries": "เฟรนช์ฟรายส์",
+    "cornDog": "คอร์นด็อก",
+    "steamedRice": "ข้าวสวย",
+
+    "drinks": "เครื่องดื่ม",
+    "bottleWater": "ขวดน้ำ",
+    "fountainSoda": "น้ำพุโซดา",
+    "bottleCanSoda": "ขวดหรือโซดากระป๋อง",
+    "lemonade": "น้ำมะนาว",
+    "pinkLemonade": "น้ำมะนาวสีชมพู",
+    "strawberryLemonade": "น้ำมะนาวสตรอเบอรี่"
+}

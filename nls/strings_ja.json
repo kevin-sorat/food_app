@@ -1,9 +1,45 @@
 {
-    "home": "こんにちは",
-    "menu": "こんにちは",
-    "translate": "こんにちは",
-    "more": "こんにちは",
-    "chickenValley": "こんにちは",
-    "pikePlaceMarket": "こんにちは",
-    "language": "こんにちは"
+    "home": "ホーム",
+    "menu": "メニュー",
+    "translate": "翻訳",
+    "more": "もっと",
+    "chickenValley": "チキンバレー",
+    "pikePlaceMarket": "パイクプレイスマーケット",
+    "language": "言語",
+    "apply": "適用",
+
+    "chicken": "チキン",
+    "drumStick": "ドラムスティック",
+    "thigh": "太もも",
+    "wings": "手羽先",
+    "breast": "胸",
+    "strips": "ストリップ",
+    "chickenStick": "チキンスティック",
+    "spicyHotStick": "スパイシーホットスティック",
+    "chickenSpecial": "チキンスペシャル",
+
+    "chickenEtc": "チキン (等)",
+    "gizzards": "砂嚢",
+    "livers": "肝臓",
+    "hearts": "ハート",
+
+    "seafood": "シーフード",
+    "tempuraShrimps": "天ぷら海老（5個）",
+    "butterflyShrimps": "バタフライエビ（5個）",
+    "codFish": "タラ魚（3個）",
+    "calamari": "イカ",
+    "addFries": "フライドポテトを追加",
+
+    "sideOrders": "サイドオーダー",
+    "frenchFries": "フライドポテト",
+    "cornDog": "アメリカンドッグ",
+    "steamedRice": "ご飯",
+
+    "drinks": "飲み物",
+    "bottleWater": "ボトルウォーター",
+    "fountainSoda": "ファウンテンソーダ",
+    "bottleCanSoda": "ボトルまたは缶ソーダ",
+    "lemonade": "レモネード",
+    "pinkLemonade": "ピンクレモネード",
+    "strawberryLemonade": "ストロベリーレモネード"
 }

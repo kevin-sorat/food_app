@@ -5,5 +5,41 @@
     "more": "More",
     "chickenValley": "Chicken Valley",
     "pikePlaceMarket": "Pike Place Market",
-    "language": "Language"
+    "language": "Language",
+    "apply": "Apply",
+
+    "chicken": "Chicken",
+    "drumStick": "Drum stick",
+    "thigh": "Thigh",
+    "wings": "Wings",
+    "breast": "Breast",
+    "strips": "Strips",
+    "chickenStick": "Chicken stick",
+    "spicyHotStick": "Spicy hot stick",
+    "chickenSpecial": "Chicken special",
+
+    "chickenEtc": "Chicken etc.",
+    "gizzards": "Gizzards",
+    "livers": "Livers",
+    "hearts": "Hearts",
+
+    "seafood": "Seafood",
+    "tempuraShrimps": "Tempura shrimps (5 pcs)",
+    "butterflyShrimps": "Butterfly shrimps (5 pcs)",
+    "codFish": "Cod fish (3 pcs)",
+    "calamari": "Calamari",
+    "addFries": "Add fries",
+
+    "sideOrders": "Side orders",
+    "frenchFries": "French fries",
+    "cornDog": "Corn dog",
+    "steamedRice": "Steamed rice",
+
+    "drinks": "Drinks",
+    "bottleWater": "Bottle water",
+    "fountainSoda": "Fountain soda",
+    "bottleCanSoda": "Bottle or can soda",
+    "lemonade": "Lemonade",
+    "pinkLemonade": "Pink lemonade",
+    "strawberryLemonade": "Strawberry lemonade"
 }
