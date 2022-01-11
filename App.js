@@ -7,6 +7,10 @@ import { getMorePage } from './pages/more.js';
 import * as Linking from 'expo-linking';
 import i18n from 'i18n-js';
 
+Linking.createURL('en');
+Linking.createURL('ja');
+Linking.createURL('th');
+
 i18n.translations = {
   en: require('./nls/strings_en.json'),
   ja: require('./nls/strings_ja.json'),
@@ -56,10 +60,10 @@ const MainComponent = () => {
   Linking.addEventListener('url', event => {
     if (event.url) {
       const parsedUrl = Linking.parse(event.url);
-      if (i18n.locale !== parsedUrl.queryParams.language) {
-        console.log("selectedLanguage: " + selectedLanguage);
-        console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
-        i18n.locale = parsedUrl.queryParams.language;
+      if (i18n.locale !== parsedUrl.path) {
+        //console.log("selectedLanguage: " + selectedLanguage);
+        //console.log("parsedUrl.path: " + parsedUrl.path);
+        i18n.locale = parsedUrl.path;
         setSelectedLanguage(i18n.locale);
       }
     }
