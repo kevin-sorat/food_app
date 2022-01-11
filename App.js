@@ -60,12 +60,20 @@ const MainComponent = () => {
   Linking.addEventListener('url', event => {
     if (event.url) {
       const parsedUrl = Linking.parse(event.url);
+      if (i18n.locale !== parsedUrl.queryParams.language) {
+        console.log("selectedLanguage: " + selectedLanguage);
+        console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
+        i18n.locale = parsedUrl.queryParams.language;
+        setSelectedLanguage(i18n.locale);
+      }
+      /*
       if (i18n.locale !== parsedUrl.path) {
         //console.log("selectedLanguage: " + selectedLanguage);
         //console.log("parsedUrl.path: " + parsedUrl.path);
         i18n.locale = parsedUrl.path;
         setSelectedLanguage(i18n.locale);
       }
+      */
     }
   });
 
