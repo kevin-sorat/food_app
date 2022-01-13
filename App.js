@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 import { getHomePage } from './pages/home.js';
 import { getMenuPage } from './pages/menu.js';
@@ -19,6 +19,30 @@ i18n.translations = {
 
 i18n.locale = "en"; // Localization.locale;
 i18n.fallbacks = true;
+
+const useMount = func => useEffect(() => func(), []);
+
+const useInitialURL = () => {
+  const [url, setUrl] = useState(null);
+  const [processing, setProcessing] = useState(true);
+
+  useMount(() => {
+    const getUrlAsync = async () => {
+      // Get the deep link used to open the app
+      const initialUrl = await Linking.getInitialURL();
+
+      // The setTimeout is just for testing purpose
+      setTimeout(() => {
+        setUrl(initialUrl);
+        setProcessing(false);
+      }, 1000);
+    };
+
+    getUrlAsync();
+  });
+
+  return { url, processing };
+};
 
 const MainComponent = () => {
 
@@ -56,6 +80,7 @@ const MainComponent = () => {
     setRoutes(navigationRoutes);
   }, [i18n.locale]);
 
+  /*
   // listen for new url events coming from Expo
   Linking.addEventListener('url', event => {
     console.log("event: " + event);
@@ -76,6 +101,24 @@ const MainComponent = () => {
       }
     }
   });
+  */
+
+  const { url: initialUrl, processing } = useInitialURL();
+  console.log("The deep link is: " + initialUrl);
+  if (initialUrl) {
+    const parsedUrl = Linking.parse(initialUrl);
+    if (parsedUrl.queryParams.language && i18n.locale !== parsedUrl.queryParams.language) {
+      console.log("selectedLanguage: " + selectedLanguage);
+      console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
+      i18n.locale = parsedUrl.queryParams.language;
+      setSelectedLanguage(i18n.locale);
+    } else if (parsedUrl.path && i18n.locale !== parsedUrl.path) {
+      console.log("selectedLanguage: " + selectedLanguage);
+      console.log("parsedUrl.path: " + parsedUrl.path);
+      i18n.locale = parsedUrl.path;
+      setSelectedLanguage(i18n.locale);
+    }
+  }
 
   return (
     <BottomNavigation

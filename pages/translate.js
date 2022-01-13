@@ -9,8 +9,8 @@ export function getTranslatePage() {
     const [highlightedLanguage, setHighlightedLanguage] = React.useState(i18n.locale);
     const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.locale);
 
-    console.log('highlightedLanguage: ' + highlightedLanguage);
-    console.log('selectedLanguage: ' + selectedLanguage);
+    //console.log('highlightedLanguage: ' + highlightedLanguage);
+    //console.log('selectedLanguage: ' + selectedLanguage);
 
     const _handleValueChange = (value) => {
         setHighlightedLanguage(value)
