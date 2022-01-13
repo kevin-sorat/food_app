@@ -57,7 +57,7 @@ const MainComponent = () => {
   }, [i18n.locale]);
 
   // listen for new url events coming from Expo
-  Linking.addEventListener('url', event => {\
+  Linking.addEventListener('url', event => {
     console.log("event: " + event);
     if (event.url) {
       const parsedUrl = Linking.parse(event.url);
