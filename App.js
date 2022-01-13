@@ -57,19 +57,20 @@ const MainComponent = () => {
   }, [i18n.locale]);
 
   // listen for new url events coming from Expo
-  Linking.addEventListener('url', event => {
+  Linking.addEventListener('url', event => {\
+    console.log("event: " + event);
     if (event.url) {
       const parsedUrl = Linking.parse(event.url);
       // if (parsedUrl.queryParams.language && i18n.locale !== parsedUrl.queryParams.language) {
       if (parsedUrl.queryParams.language) {
-        //console.log("selectedLanguage: " + selectedLanguage);
-        //console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
+        console.log("selectedLanguage: " + selectedLanguage);
+        console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
         i18n.locale = parsedUrl.queryParams.language;
         setSelectedLanguage(i18n.locale);
       // } else if (parsedUrl.path && i18n.locale !== parsedUrl.path) {
       } else if (parsedUrl.path) {
-        //console.log("selectedLanguage: " + selectedLanguage);
-        //console.log("parsedUrl.path: " + parsedUrl.path);
+        console.log("selectedLanguage: " + selectedLanguage);
+        console.log("parsedUrl.path: " + parsedUrl.path);
         i18n.locale = parsedUrl.path;
         setSelectedLanguage(i18n.locale);
       }
