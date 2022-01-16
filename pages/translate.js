@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { StyleSheet, SafeAreaView, Dimensions, View, Button } from "react-native";
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, SafeAreaView, Dimensions, View, Button } from 'react-native';
 import { Headline, Subheading } from 'react-native-paper';
 import {Picker} from '@react-native-picker/picker';
 import i18n from 'i18n-js';

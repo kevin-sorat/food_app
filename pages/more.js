@@ -33,7 +33,7 @@ export function getMorePage() {
                 </View>
                 <View style={styles.rightSection}>
                     <Button icon='directions' mode='outlined' onPress={() => isMobileApp ? Linking.openURL(mapURL) : window.open(mapURL, '_blank')}>
-                        {i18n.t('direction')}
+                        {i18n.t('directions')}
                     </Button>
                 </View>
             </View>
@@ -100,14 +100,16 @@ const styles = StyleSheet.create({
         paddingRight: 20,
     },
     leftSection: {
-        flex: 0.7,
+        flex: 0.6,
+        padding: 2,
     },
     hoursLeftSection: {
         flex: 0.5,
     },
     rightSection: {
-        flex: 0.3,
+        flex: 0.4,
         justifyContent: 'center',
+        padding: 2,
     },
     hoursRightSection: {
         flex: 0.5,
