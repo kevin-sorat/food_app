@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView } from 'react-native';
 import { Headline, Subheading } from 'react-native-paper';
 import i18n from 'i18n-js';
 

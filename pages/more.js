@@ -1,12 +1,70 @@
 import * as React from 'react';
-import { StyleSheet, SafeAreaView } from "react-native";
-import { Headline, Subheading } from 'react-native-paper';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
+import { Title, Headline, Subheading, Button } from 'react-native-paper';
+import * as Linking from 'expo-linking';
+import i18n from 'i18n-js';
+
+const address = '1507 Pike Pl, Seattle, WA 98101';
+const phoneNumber = '(206) 624-0595';
+const businessHours = '9:00 am - 6:00 pm';
+
+const scheme = Platform.select({ ios: 'maps:0,0?q=', android: 'geo:0,0?q=' });
+const latLng = '47.608780144844424,-122.34047423281696';
+const label = i18n.t('chickenValley');
+const mapURL = Platform.select({
+  ios: `${scheme}${label}@${latLng}`,
+  android: `${scheme}${latLng}(${label})`
+});
 
 export function getMorePage() {
     return (
         <SafeAreaView style={styles.container}>
-            <Headline style={styles.content}>More</Headline>
-            <Subheading>Coming soon...</Subheading>
+            <Headline style={styles.content}>More Info</Headline>
+            <View style={styles.section}>
+                <View style={styles.leftSection}>
+                    <Title>{i18n.t('address')}</Title>
+                    <Subheading>{address}</Subheading>
+                </View>
+                <View style={styles.rightSection}>
+                    <Button icon='directions' mode='outlined' onPress={() => Linking.openURL(mapURL)}>
+                        {i18n.t('direction')}
+                    </Button>
+                </View>
+            </View>
+            <View style={styles.section}>
+                <View style={styles.leftSection}>
+                    <Title>{i18n.t('phone')}</Title>
+                    <Subheading>{phoneNumber}</Subheading>
+                </View>
+                <View style={styles.rightSection}>
+                    <Button icon='phone' mode='outlined' onPress={() =>  Linking.openURL(`tel:${phoneNumber}`)}>
+                        {i18n.t('call')}
+                    </Button>
+                </View>
+            </View>
+            <View style={styles.section}>
+                <Title>{i18n.t('businessHours')}</Title>
+            </View>
+            <View style={styles.hoursSection}>
+                <View style={styles.hoursLeftSection}>
+                    <Subheading>{i18n.t('monday')}</Subheading>
+                    <Subheading>{i18n.t('tuesday')}</Subheading>
+                    <Subheading>{i18n.t('wednesday')}</Subheading>
+                    <Subheading>{i18n.t('thursday')}</Subheading>
+                    <Subheading>{i18n.t('friday')}</Subheading>
+                    <Subheading>{i18n.t('saturday')}</Subheading>
+                    <Subheading>{i18n.t('sunday')}</Subheading>
+                </View>
+                <View style={styles.hoursRightSection}>
+                    <Subheading>{businessHours}</Subheading>
+                    <Subheading>{businessHours}</Subheading>
+                    <Subheading>{businessHours}</Subheading>
+                    <Subheading>{businessHours}</Subheading>
+                    <Subheading>{businessHours}</Subheading>
+                    <Subheading>{businessHours}</Subheading>
+                    <Subheading>{businessHours}</Subheading>
+                </View>
+            </View>
         </SafeAreaView>
     );
 }
@@ -15,11 +73,38 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center',
     },
     content: {
         justifyContent: 'center',
         alignItems: 'center',
-    }
+        marginBottom: 20,
+    },
+    section: {
+        flexDirection: 'row',
+        width: '100%',
+        padding: 10,
+        marginTop: 20,
+    },
+    hoursSection: {
+        flexDirection: 'row',
+        width: '100%',
+        paddingLeft: 20,
+        paddingBottom: 20,
+        paddingRight: 20,
+    },
+    leftSection: {
+        flex: 0.7,
+    },
+    hoursLeftSection: {
+        flex: 0.5,
+    },
+    rightSection: {
+        flex: 0.3,
+        justifyContent: 'center',
+    },
+    hoursRightSection: {
+        flex: 0.5,
+        alignItems: 'center',
+    },
 });

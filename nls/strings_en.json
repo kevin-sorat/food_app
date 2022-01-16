@@ -41,5 +41,18 @@
     "bottleCanSoda": "Bottle or can soda",
     "lemonade": "Lemonade",
     "pinkLemonade": "Pink lemonade",
-    "strawberryLemonade": "Strawberry lemonade"
+    "strawberryLemonade": "Strawberry lemonade",
+
+    "address": "Address",
+    "direction": "Direction",
+    "phone": "Phone",
+    "call": "Call",
+    "businessHours": "Business hours",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
 }

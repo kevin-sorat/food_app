@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { getDetailPage } from './detail.js';
 import i18n from 'i18n-js';
@@ -7,10 +7,10 @@ import i18n from 'i18n-js';
 
 export function getMenuPage() {
     const [modalVisible, setModalVisible] = useState(false);
-    const [selectedItemID, setSelectedItemID] = useState("");
-    const [selectedItemName, setSelectedItemName] = useState("");
-    const [selectedItemPrice, setSelectedItemPrice] = useState("");
-    const [selectedItemPic, setSelectedItemPic] = useState("");
+    const [selectedItemID, setSelectedItemID] = useState('');
+    const [selectedItemName, setSelectedItemName] = useState('');
+    const [selectedItemPrice, setSelectedItemPrice] = useState('');
+    const [selectedItemPic, setSelectedItemPic] = useState('');
 
     const Item = ({ title }) => (
         <TouchableOpacity style={styles.item} onPress={() => {
@@ -30,51 +30,51 @@ export function getMenuPage() {
         {
             title: i18n.t('chicken'),
             data: [
-                {id: "ch001", name: i18n.t('drumStick'), price: "$6.99/lb", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "ch002", name: i18n.t('thigh'), price: "$5.99/lb", pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
-                {id: "ch003", name: i18n.t('wings'), price: "$7.99/lb", pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
-                {id: "ch004", name: i18n.t('breast'), price: "$6.99/lb", pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
-                {id: "ch005", name: i18n.t('strips'), price: "$9.68/lb", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "ch006", name: i18n.t('chickenStick'), price: "$5.47", pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
-                {id: "ch007", name: i18n.t('spicyHotStick'), price: "$5.47", pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
-                {id: "ch008", name: i18n.t('chickenSpecial'), price: "$7.82", pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
+                {id: 'ch001', name: i18n.t('drumStick'), price: '$6.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ch002', name: i18n.t('thigh'), price: '$5.99/lb', pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
+                {id: 'ch003', name: i18n.t('wings'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
+                {id: 'ch004', name: i18n.t('breast'), price: '$6.99/lb', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
+                {id: 'ch005', name: i18n.t('strips'), price: '$9.68/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ch006', name: i18n.t('chickenStick'), price: '$5.47', pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
+                {id: 'ch007', name: i18n.t('spicyHotStick'), price: '$5.47', pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
+                {id: 'ch008', name: i18n.t('chickenSpecial'), price: '$7.82', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
             ]
         },
         {
             title: i18n.t('chickenEtc'),
             data: [
-                {id: "ce001", name: i18n.t('gizzards'), price: "$7.99/lb", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "ce002", name: i18n.t('livers'), price: "$7.99/lb", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "ce003", name: i18n.t('hearts'), price: "$8.99/lb", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ce001', name: i18n.t('gizzards'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ce002', name: i18n.t('livers'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ce003', name: i18n.t('hearts'), price: '$8.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
         {
             title: i18n.t('seafood'),
             data: [
-                {id: "sf001", name: i18n.t('tempuraShrimps'), price: "$7.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "sf002", name: i18n.t('butterflyShrimps'), price: "$5.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "sf003", name: i18n.t('codFish'), price: "$6.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "sf004", name: i18n.t('calamari'), price: "$5.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "sf005", name: i18n.t('addFries'), price: "$1.00", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf001', name: i18n.t('tempuraShrimps'), price: '$7.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf002', name: i18n.t('butterflyShrimps'), price: '$5.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf003', name: i18n.t('codFish'), price: '$6.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf004', name: i18n.t('calamari'), price: '$5.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf005', name: i18n.t('addFries'), price: '$1.00', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
         {
             title: i18n.t('sideOrders'),
             data: [
-                {id: "so001", name: i18n.t('frenchFries'), price: "$2.25", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "so002", name: i18n.t('cornDog'), price: "$2.51", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "so003", name: i18n.t('steamedRice'), price: "$2.75", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'so001', name: i18n.t('frenchFries'), price: '$2.25', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'so002', name: i18n.t('cornDog'), price: '$2.51', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'so003', name: i18n.t('steamedRice'), price: '$2.75', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
         {
             title: i18n.t('drinks'),
             data: [
-                {id: "dr001", name: i18n.t('bottleWater'), price: "$1.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "dr002", name: i18n.t('fountainSoda'), price: "$1.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "dr003", name: i18n.t('bottleCanSoda'), price: "$2.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "dr004", name: i18n.t('lemonade'), price: "$2.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "dr005", name: i18n.t('pinkLemonade'), price: "$2.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: "dr006", name: i18n.t('strawberryLemonade'), price: "$2.99", pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr001', name: i18n.t('bottleWater'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr002', name: i18n.t('fountainSoda'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr003', name: i18n.t('bottleCanSoda'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr004', name: i18n.t('lemonade'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr005', name: i18n.t('pinkLemonade'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr006', name: i18n.t('strawberryLemonade'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
     ];    
@@ -82,16 +82,16 @@ export function getMenuPage() {
     return (
         <SafeAreaView style={styles.container}>
             <Modal
-                animationType="slide"
+                animationType='slide'
                 transparent={false}
                 visible={modalVisible}
                 onRequestClose={() => {
-                    // Alert.alert("Modal has been closed.");
+                    // Alert.alert('Modal has been closed.');
                     setModalVisible(!modalVisible);
                 }}
             >
                 <SafeAreaView style={styles.modalView}>
-                    <AntDesign style={styles.closeButton} name="closecircleo" size={32} color="black" onPress={() => setModalVisible(!modalVisible)} />
+                    <AntDesign style={styles.closeButton} name='closecircleo' size={32} color='black' onPress={() => setModalVisible(!modalVisible)} />
                     {getDetailPage(selectedItemID, selectedItemName, selectedItemPrice, selectedItemPic)}
                 </SafeAreaView>
             </Modal>
@@ -115,12 +115,12 @@ const styles = StyleSheet.create({
         marginHorizontal: 16
     },
     item: {
-        backgroundColor: "#bdc6ff",
+        backgroundColor: '#bdc6ff',
         padding: 10,
         marginVertical: 8,
         flex: 1,
         flexDirection: 'row',
-        justifyContent: "space-between",
+        justifyContent: 'space-between',
         borderRadius: 6,
     },
     smallPic: {
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         flex: 0.6,
         paddingLeft: 10,
-        fontWeight: "600",
+        fontWeight: '600',
     },
     price: {
         fontSize: 16,

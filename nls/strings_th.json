@@ -41,5 +41,18 @@
     "bottleCanSoda": "ขวดหรือโซดากระป๋อง",
     "lemonade": "น้ำมะนาว",
     "pinkLemonade": "น้ำมะนาวสีชมพู",
-    "strawberryLemonade": "น้ำมะนาวสตรอเบอรี่"
+    "strawberryLemonade": "น้ำมะนาวสตรอเบอรี่",
+
+    "address": "ที่อยู่",
+    "direction": "ทิศทาง",
+    "phone": "โทรศัพท์",
+    "call": "โทรออก",
+    "businessHours": "เวลาทำการ",
+    "monday": "วันจันทร์",
+    "tuesday": "วันอังคาร",
+    "wednesday": "วันพุธ",
+    "thursday": "วันพฤหัสบดี",
+    "friday": "วันศุกร์",
+    "saturday": "วันเสาร์",
+    "sunday": "วันอาทิตย์"
 }

@@ -17,7 +17,7 @@ i18n.translations = {
   th: require('./nls/strings_th.json'),
 };
 
-i18n.locale = "en"; // Localization.locale;
+i18n.locale = 'en'; // Localization.locale;
 i18n.fallbacks = true;
 
 const useMount = func => useEffect(() => func(), []);
@@ -108,13 +108,13 @@ const MainComponent = () => {
   if (initialUrl) {
     const parsedUrl = Linking.parse(initialUrl);
     if (parsedUrl.queryParams.language && i18n.locale !== parsedUrl.queryParams.language) {
-      console.log("selectedLanguage: " + selectedLanguage);
-      console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
+      //console.log("selectedLanguage: " + selectedLanguage);
+      //console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
       i18n.locale = parsedUrl.queryParams.language;
       setSelectedLanguage(i18n.locale);
     } else if (parsedUrl.path && i18n.locale !== parsedUrl.path) {
-      console.log("selectedLanguage: " + selectedLanguage);
-      console.log("parsedUrl.path: " + parsedUrl.path);
+      //console.log("selectedLanguage: " + selectedLanguage);
+      //console.log("parsedUrl.path: " + parsedUrl.path);
       i18n.locale = parsedUrl.path;
       setSelectedLanguage(i18n.locale);
     }
