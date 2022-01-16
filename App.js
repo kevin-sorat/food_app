@@ -19,6 +19,7 @@ i18n.translations = {
 
 i18n.locale = 'en'; // Localization.locale;
 i18n.fallbacks = true;
+var hasLocaleBeenSetByURL = false;
 
 const useMount = func => useEffect(() => func(), []);
 
@@ -80,43 +81,22 @@ const MainComponent = () => {
     setRoutes(navigationRoutes);
   }, [i18n.locale]);
 
-  /*
-  // listen for new url events coming from Expo
-  Linking.addEventListener('url', event => {
-    console.log("event: " + event);
-    if (event.url) {
-      const parsedUrl = Linking.parse(event.url);
-      // if (parsedUrl.queryParams.language && i18n.locale !== parsedUrl.queryParams.language) {
-      if (parsedUrl.queryParams.language) {
-        console.log("selectedLanguage: " + selectedLanguage);
-        console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
-        i18n.locale = parsedUrl.queryParams.language;
-        setSelectedLanguage(i18n.locale);
-      // } else if (parsedUrl.path && i18n.locale !== parsedUrl.path) {
-      } else if (parsedUrl.path) {
-        console.log("selectedLanguage: " + selectedLanguage);
-        console.log("parsedUrl.path: " + parsedUrl.path);
-        i18n.locale = parsedUrl.path;
-        setSelectedLanguage(i18n.locale);
-      }
-    }
-  });
-  */
-
   const { url: initialUrl, processing } = useInitialURL();
   console.log("The deep link is: " + initialUrl);
-  if (initialUrl) {
+  if (initialUrl && !hasLocaleBeenSetByURL) {
     const parsedUrl = Linking.parse(initialUrl);
     if (parsedUrl.queryParams.language && i18n.locale !== parsedUrl.queryParams.language) {
       //console.log("selectedLanguage: " + selectedLanguage);
       //console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
       i18n.locale = parsedUrl.queryParams.language;
       setSelectedLanguage(i18n.locale);
+      hasLocaleBeenSetByURL = true;
     } else if (parsedUrl.path && i18n.locale !== parsedUrl.path) {
       //console.log("selectedLanguage: " + selectedLanguage);
       //console.log("parsedUrl.path: " + parsedUrl.path);
       i18n.locale = parsedUrl.path;
       setSelectedLanguage(i18n.locale);
+      hasLocaleBeenSetByURL = true;
     }
   }
 

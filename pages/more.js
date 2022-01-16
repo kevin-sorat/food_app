@@ -23,7 +23,9 @@ if (isMobileApp) {
 export function getMorePage() {
     return (
         <SafeAreaView style={styles.container}>
-            <Headline style={styles.content}>More Info</Headline>
+            <Headline style={styles.content}>
+                {i18n.t('moreInfo')}
+            </Headline>
             <View style={styles.section}>
                 <View style={styles.leftSection}>
                     <Title>{i18n.t('address')}</Title>
