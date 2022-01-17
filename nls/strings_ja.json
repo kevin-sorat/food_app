@@ -55,5 +55,14 @@
     "thursday": "木曜日",
     "friday": "金曜日",
     "saturday": "土曜日",
-    "sunday": "日曜日"
+    "sunday": "日曜日",
+
+    "ingredients": "材料",
+    "nutrition": "栄養",
+    "calories": "カロリー",
+    "totalFat": "総脂質",
+    "sodium": "ナトリウム",
+    "totalCarbohydrate": "総炭水化物",
+    "totalSugar": "総砂糖",
+    "protein": "タンパク質"
 }

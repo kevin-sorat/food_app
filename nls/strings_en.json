@@ -55,5 +55,14 @@
     "thursday": "Thursday",
     "friday": "Friday",
     "saturday": "Saturday",
-    "sunday": "Sunday"
+    "sunday": "Sunday",
+
+    "ingredients": "Ingredients",
+    "nutrition": "Nutrition",
+    "calories": "Calories",
+    "totalFat": "Total Fat",
+    "sodium": "Sodium",
+    "totalCarbohydrate": "Total Carbohydrate",
+    "totalSugar": "Total Sugar",
+    "protein": "Protein"
 }

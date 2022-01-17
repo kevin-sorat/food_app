@@ -55,5 +55,14 @@
     "thursday": "วันพฤหัสบดี",
     "friday": "วันศุกร์",
     "saturday": "วันเสาร์",
-    "sunday": "วันอาทิตย์"
+    "sunday": "วันอาทิตย์",
+
+    "ingredients": "วัตถุดิบ",
+    "nutrition": "โภชนาการ",
+    "calories": "แคลอรี่",
+    "totalFat": "ไขมันทั้งหมด",
+    "sodium": "โซเดียม",
+    "totalCarbohydrate": "คาร์โบไฮเดรตทั้งหมด",
+    "totalSugar": "น้ำตาลทั้งหมด",
+    "protein": "โปรตีน"
 }

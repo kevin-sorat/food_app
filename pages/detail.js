@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, View, ScrollView } from 'react-native';
 import { Headline, Subheading, Text, DataTable } from 'react-native-paper';
+import i18n from 'i18n-js';
 
 const DETAIL_DATA = [
     {
@@ -52,6 +53,8 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
     }
 
     let selectedDetail = DETAIL_DATA.find(detail => detail.id === selectedItemID);
+
+    // TODO: Instead of setting the default detail, thrown an issue because this condition should not happen
     if (!selectedDetail) {
         selectedDetail = DETAIL_DATA[0];
     }
@@ -62,32 +65,32 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
             <Subheading>{selectedItemPrice}</Subheading>
             <View style={styles.subDetailView}>
                 <Image style={styles.bigPic} source={selectedItemPic} />
-                <Headline style={styles.Ingredients}>Ingredients</Headline>
+                <Headline style={styles.Ingredients}>{i18n.t('ingredients')}</Headline>
                 <Text>{selectedDetail.ingredients}</Text>
-                <Headline style={styles.nutrition}>Nutrition</Headline>
+                <Headline style={styles.nutrition}>{i18n.t('nutrition')}</Headline>
                 <DataTable>
                     <DataTable.Row>
-                        <DataTable.Cell>Calories</DataTable.Cell>
+                        <DataTable.Cell>{i18n.t('calories')}</DataTable.Cell>
                         <DataTable.Cell numeric>{selectedDetail.calories}</DataTable.Cell>
                     </DataTable.Row>
                     <DataTable.Row>
-                        <DataTable.Cell>Total Fat</DataTable.Cell>
+                        <DataTable.Cell>{i18n.t('totalFat')}</DataTable.Cell>
                         <DataTable.Cell numeric>{selectedDetail.totalFat}</DataTable.Cell>
                     </DataTable.Row>
                     <DataTable.Row>
-                        <DataTable.Cell>Sodium</DataTable.Cell>
+                        <DataTable.Cell>{i18n.t('sodium')}</DataTable.Cell>
                         <DataTable.Cell numeric>{selectedDetail.sodium}</DataTable.Cell>
                     </DataTable.Row>
                     <DataTable.Row>
-                        <DataTable.Cell>Total Carbohydrate</DataTable.Cell>
+                        <DataTable.Cell>{i18n.t('totalCarbohydrate')}</DataTable.Cell>
                         <DataTable.Cell numeric>{selectedDetail.totalCarbohydrate}</DataTable.Cell>
                     </DataTable.Row>
                     <DataTable.Row>
-                        <DataTable.Cell>Total Sugar</DataTable.Cell>
+                        <DataTable.Cell>{i18n.t('totalSugar')}</DataTable.Cell>
                         <DataTable.Cell numeric>{selectedDetail.totalSugar}</DataTable.Cell>
                     </DataTable.Row>
                     <DataTable.Row>
-                        <DataTable.Cell>Protein</DataTable.Cell>
+                        <DataTable.Cell>{i18n.t('protein')}</DataTable.Cell>
                         <DataTable.Cell numeric>{selectedDetail.protein}</DataTable.Cell>
                     </DataTable.Row>
                 </DataTable>
