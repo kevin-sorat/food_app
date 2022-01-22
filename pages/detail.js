@@ -3,61 +3,22 @@ import { StyleSheet, Image, View, ScrollView } from 'react-native';
 import { Headline, Subheading, Text, DataTable } from 'react-native-paper';
 import i18n from 'i18n-js';
 
-const DETAIL_DATA = [
-    {
-        id: 'ch000',
-        ingredients: 'Chicken Meat, Flour, Egg Yolks',
-        calories: '200Cal',
-        totalFat: '20g',
-        sodium: '500mg',
-        totalCarbohydrate: '20g',
-        totalSugar: '0g',
-        protein: '20g',
-    },
-    {
-        id: 'ch001',
-        ingredients: 'Chicken Leg, Flour, Egg Yolks',
-        calories: '159Cal',
-        totalFat: '20g',
-        sodium: '500mg',
-        totalCarbohydrate: '20g',
-        totalSugar: '0g',
-        protein: '25g',
-    },
-    {
-        id: 'ch002',
-        ingredients: 'Chicken Thigh, Flour, Egg Yolks',
-        calories: '200Cal',
-        totalFat: '40g',
-        sodium: '500mg',
-        totalCarbohydrate: '20g',
-        totalSugar: '0g',
-        protein: '20g',
-    },
-    {
-        id: 'ch003',
-        ingredients: 'Chicken Wing, Flour, Egg Yolks',
-        calories: '100Cal',
-        totalFat: '30g',
-        sodium: '500mg',
-        totalCarbohydrate: '20g',
-        totalSugar: '0g',
-        protein: '10g',
-    },
-];
-
 export function getDetailPage(selectedItemID, selectedItemName, selectedItemPrice, selectedItemPic) {
 
     if (!selectedItemID) {
         return;
     }
 
-    let selectedDetail = DETAIL_DATA.find(detail => detail.id === selectedItemID);
-
-    // TODO: Instead of setting the default detail, thrown an issue because this condition should not happen
-    if (!selectedDetail) {
-        selectedDetail = DETAIL_DATA[0];
-    }
+    const selectedDetail = {
+        name: i18n.t(selectedItemID + "_name"),
+        ingredients: i18n.t(selectedItemID + "_ingredients"),
+        calories: i18n.t(selectedItemID + "_calories"),
+        totalFat: i18n.t(selectedItemID + "_totalFat"),
+        sodium: i18n.t(selectedItemID + "_sodium"),
+        totalCarbohydrate: i18n.t(selectedItemID + "_totalCarbohydrate"),
+        totalSugar: i18n.t(selectedItemID + "_totalSugar"),
+        protein: i18n.t(selectedItemID + "_protein")
+    };
 
     return (
         <ScrollView style={styles.detailView}>

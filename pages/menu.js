@@ -30,51 +30,51 @@ export function getMenuPage() {
         {
             title: i18n.t('chicken'),
             data: [
-                {id: 'ch001', name: i18n.t('drumStick'), price: '$6.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'ch002', name: i18n.t('thigh'), price: '$5.99/lb', pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
-                {id: 'ch003', name: i18n.t('wings'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
-                {id: 'ch004', name: i18n.t('breast'), price: '$6.99/lb', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
-                {id: 'ch005', name: i18n.t('strips'), price: '$9.68/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'ch006', name: i18n.t('chickenStick'), price: '$5.47', pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
-                {id: 'ch007', name: i18n.t('spicyHotStick'), price: '$5.47', pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
-                {id: 'ch008', name: i18n.t('chickenSpecial'), price: '$7.82', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
+                {id: 'ch001', name: i18n.t('ch001_name'), price: '$6.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ch002', name: i18n.t('ch002_name'), price: '$5.99/lb', pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
+                {id: 'ch003', name: i18n.t('ch003_name'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
+                {id: 'ch004', name: i18n.t('ch004_name'), price: '$6.99/lb', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
+                {id: 'ch005', name: i18n.t('ch005_name'), price: '$9.68/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ch006', name: i18n.t('ch006_name'), price: '$5.47', pic: require('../assets/800px_COLOURBOX9177162.jpeg')},
+                {id: 'ch007', name: i18n.t('ch007_name'), price: '$5.47', pic: require('../assets/800px_COLOURBOX8687013.jpeg')},
+                {id: 'ch008', name: i18n.t('ch008_name'), price: '$7.82', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
             ]
         },
         {
             title: i18n.t('chickenEtc'),
             data: [
-                {id: 'ce001', name: i18n.t('gizzards'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'ce002', name: i18n.t('livers'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'ce003', name: i18n.t('hearts'), price: '$8.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ce001', name: i18n.t('ce001_name'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ce002', name: i18n.t('ce002_name'), price: '$7.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ce003', name: i18n.t('ce003_name'), price: '$8.99/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
         {
             title: i18n.t('seafood'),
             data: [
-                {id: 'sf001', name: i18n.t('tempuraShrimps'), price: '$7.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'sf002', name: i18n.t('butterflyShrimps'), price: '$5.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'sf003', name: i18n.t('codFish'), price: '$6.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'sf004', name: i18n.t('calamari'), price: '$5.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'sf005', name: i18n.t('addFries'), price: '$1.00', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf001', name: i18n.t('sf001_name'), price: '$7.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf002', name: i18n.t('sf002_name'), price: '$5.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf003', name: i18n.t('sf003_name'), price: '$6.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf004', name: i18n.t('sf004_name'), price: '$5.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'sf005', name: i18n.t('sf005_name'), price: '$1.00', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
         {
             title: i18n.t('sideOrders'),
             data: [
-                {id: 'so001', name: i18n.t('frenchFries'), price: '$2.25', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'so002', name: i18n.t('cornDog'), price: '$2.51', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'so003', name: i18n.t('steamedRice'), price: '$2.75', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'so001', name: i18n.t('so001_name'), price: '$2.25', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'so002', name: i18n.t('so002_name'), price: '$2.51', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'so003', name: i18n.t('so003_name'), price: '$2.75', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
         {
             title: i18n.t('drinks'),
             data: [
-                {id: 'dr001', name: i18n.t('bottleWater'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr002', name: i18n.t('fountainSoda'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr003', name: i18n.t('bottleCanSoda'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr004', name: i18n.t('lemonade'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr005', name: i18n.t('pinkLemonade'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr006', name: i18n.t('strawberryLemonade'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr001', name: i18n.t('dr001_name'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr002', name: i18n.t('dr002_name'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr003', name: i18n.t('dr003_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr004', name: i18n.t('dr004_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr005', name: i18n.t('dr005_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr006', name: i18n.t('dr006_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
     ];    
