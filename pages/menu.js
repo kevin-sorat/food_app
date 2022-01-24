@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal, View } from 'react-native';
+import { Headline, Subheading } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
 import { getDetailPage } from './detail.js';
 import i18n from 'i18n-js';
@@ -96,6 +97,11 @@ export function getMenuPage() {
                 </SafeAreaView>
             </Modal>
 
+            <View style={styles.headerContainer}>
+                <Headline style={styles.headerContent}>{i18n.t('chickenValley')}</Headline>
+                <Subheading>{i18n.t('pikePlaceMarket')}</Subheading>
+            </View>
+
             <SectionList
                 sections={MENU_DATA}
                 keyExtractor={(item, index) => item + index}
@@ -113,6 +119,16 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: StatusBar.currentHeight,
         marginHorizontal: 16
+    },
+    headerContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 20,
+    },
+    headerContent: {
+        fontWeight: 500,
+        fontSize: 30,
+        fontFamily: 'lucida grande',
     },
     item: {
         backgroundColor: '#bdc6ff',
