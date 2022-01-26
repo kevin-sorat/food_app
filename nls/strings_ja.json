@@ -8,41 +8,6 @@
     "language": "言語",
     "apply": "適用",
 
-    "chicken": "チキン",
-    "drumStick": "ドラムスティック",
-    "thigh": "太もも",
-    "wings": "手羽先",
-    "breast": "胸",
-    "strips": "ストリップ",
-    "chickenStick": "チキンスティック",
-    "spicyHotStick": "スパイシーホットスティック",
-    "chickenSpecial": "チキンスペシャル",
-
-    "chickenEtc": "チキン (等)",
-    "gizzards": "砂嚢",
-    "livers": "肝臓",
-    "hearts": "ハート",
-
-    "seafood": "シーフード",
-    "tempuraShrimps": "天ぷら海老（5個）",
-    "butterflyShrimps": "バタフライエビ（5個）",
-    "codFish": "タラ魚（3個）",
-    "calamari": "イカ",
-    "addFries": "フライドポテトを追加",
-
-    "sideOrders": "サイドオーダー",
-    "frenchFries": "フライドポテト",
-    "cornDog": "アメリカンドッグ",
-    "steamedRice": "ご飯",
-
-    "drinks": "飲み物",
-    "bottleWater": "ボトルウォーター",
-    "fountainSoda": "ファウンテンソーダ",
-    "bottleCanSoda": "ボトルまたは缶ソーダ",
-    "lemonade": "レモネード",
-    "pinkLemonade": "ピンクレモネード",
-    "strawberryLemonade": "ストロベリーレモネード",
-
     "moreInfo": "より詳しい情報",
     "address": "住所",
     "directions": "方向",
@@ -64,5 +29,86 @@
     "sodium": "ナトリウム",
     "totalCarbohydrate": "総炭水化物",
     "totalSugar": "総砂糖",
-    "protein": "タンパク質"
+    "protein": "タンパク質",
+
+    "chicken": "チキン",
+    "chickenEtc": "チキン (等)",
+    "seafood": "シーフード",
+    "sideOrders": "サイドオーダー",
+    "drinks": "飲み物",
+
+    "ch001_name": "ドラムスティック",
+    "ch001_ingredients": "鶏の脚、小麦粉、卵黄",
+
+    "ch002_name": "太もも",
+    "ch002_ingredients": "鶏もも肉、小麦粉、卵黄",
+
+    "ch003_name": "手羽先",
+    "ch003_ingredients": "手羽先、小麦粉、卵黄",
+
+    "ch004_name": "胸",
+    "ch004_ingredients": "鶏の胸肉、小麦粉、卵黄",
+
+    "ch005_name": "ストリップ",
+    "ch005_ingredients": "鶏の胸肉、小麦粉、卵黄",
+
+    "ch006_name": "チキンスティック",
+    "ch006_ingredients": "鶏の胸肉、小麦粉、卵黄",
+
+    "ch007_name": "スパイシーホットスティック",
+    "ch007_ingredients": "鶏の胸肉、小麦粉、卵黄",
+
+    "ch008_name": "チキンスペシャル",
+    "ch008_ingredients": "チキンストリップ、フライドポテト、ファウンテンソーダ",
+
+    "ce001_name": "砂嚢",
+    "ce001_ingredients": "砂肝、小麦粉、卵黄",
+
+    "ce002_name": "肝臓",
+    "ce002_ingredients": "鶏レバー、小麦粉、卵黄",
+
+    "ce003_name": "ハート",
+    "ce003_ingredients": "鶏の心臓、小麦粉、卵黄",
+
+    "sf001_name": "天ぷら海老（5個）",
+    "sf001_ingredients": "エビ、小麦粉、卵黄",
+
+    "sf002_name": "バタフライエビ（5個）",
+    "sf002_ingredients": "エビ、小麦粉、卵黄",
+
+    "sf003_name": "タラ魚（3個）",
+    "sf003_ingredients": "タラの魚、小麦粉、卵黄",
+
+    "sf004_name": "イカ",
+    "sf004_ingredients": "イカ、小麦粉、卵黄",
+
+    "sf005_name": "フライドポテトを追加",
+    "sf005_ingredients": "じゃがいも、塩",
+
+    "so001_name": "フライドポテト",
+    "so001_ingredients": "じゃがいも、塩",
+
+    "so002_name": "アメリカンドッグ",
+    "so002_ingredients": "ホットドッグ、コーンスターチ",
+
+    "so003_name": "ご飯",
+    "so003_ingredients": "蒸しご飯",
+
+    "dr001_name": "ボトルウォーター",
+    "dr001_ingredients": "水",
+
+    "dr002_name": "ファウンテンソーダ",
+    "dr002_ingredients": "水、砂糖",
+
+    "dr003_name": "ボトルまたは缶ソーダ",
+    "dr003_ingredients": "水、砂糖",
+
+    "dr004_name": "レモネード",
+    "dr004_ingredients": "水、砂糖、レモン",
+
+    "dr005_name": "ピンクレモネード",
+    "dr005_ingredients": "水、砂糖、レモン、ピンクの染料",
+
+    "dr006_name": "ストロベリーレモネード",
+    "dr006_ingredients": "水、砂糖、レモン、イチゴ"
 }

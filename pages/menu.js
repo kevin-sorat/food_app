@@ -123,7 +123,8 @@ const styles = StyleSheet.create({
     headerContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20,
+        marginTop: 10,
+        marginBottom: 10,
     },
     headerContent: {
         fontWeight: 500,
