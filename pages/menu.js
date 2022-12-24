@@ -115,8 +115,8 @@ export function getMenuPage() {
 
 const styles = StyleSheet.create({
     bigPic: {
-        width: 300,
-        height: 250,
+        width: 200,
+        height: 150,
         resizeMode: 'contain',
     },
     container: {
@@ -127,6 +127,8 @@ const styles = StyleSheet.create({
     headerContainer: {
         justifyContent: 'center',
         alignItems: 'center',
+        paddingTop: 8,
+        paddingBottom: 8,
     },
     headerContent: {
         fontWeight: 500,
