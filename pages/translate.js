@@ -45,6 +45,7 @@ export function getTranslatePage() {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: '#e9d1d1',
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
     },
     toolbar: {
         marginTop: 30,
-        backgroundColor: '#f1f1f1',
+        backgroundColor: '#e9d1d1',
         borderRadius: 10,
         borderWidth: 1,
         // width: 280,

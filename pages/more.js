@@ -77,6 +77,7 @@ export function getMorePage() {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: '#e9d1d1',
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',

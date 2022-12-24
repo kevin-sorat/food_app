@@ -174,10 +174,13 @@ const styles = StyleSheet.create({
     // For modal
     // ------------------------------
     modalView: {
+        backgroundColor: '#a74545',
         flex: 1,
     },
     closeButton: {
+        color: '#E6E6E6',
         marginLeft: 10,
+        padding: 10,
     }
     // ------------------------------
 });

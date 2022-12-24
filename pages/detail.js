@@ -62,6 +62,7 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
 
 const styles = StyleSheet.create({
     detailView: {
+        backgroundColor: '#e9d1d1',
         padding: 20,
         width: '100%',
         height: '100%',
