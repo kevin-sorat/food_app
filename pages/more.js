@@ -5,8 +5,8 @@ import * as Linking from 'expo-linking';
 import i18n from 'i18n-js';
 
 const address = '1507 Pike Pl, Seattle, WA 98101';
-const phoneNumber = '(206) 624-0595';
-const businessHours = '9:00 am - 6:00 pm';
+const phoneNumber = '(360) 347-7608';
+const businessHours = '9:00 am - 5:00 pm';
 
 var mapURL = 'https://www.google.com/maps/place/Chicken+Valley/@47.6086608,-122.343135,17z/data=!3m1!4b1!4m5!3m4!1s0x54906b5ec1a299f5:0x191b1f48d4e302a9!8m2!3d47.6086572!4d-122.3409463';
 const isMobileApp = Platform && (Platform.OS === 'ios' || Platform.OS === 'android');

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { StyleSheet } from 'react-native';
 import { BottomNavigation, Text } from 'react-native-paper';
 import { getHomePage } from './pages/home.js';
 import { getMenuPage } from './pages/menu.js';
@@ -102,6 +103,7 @@ const MainComponent = () => {
 
   return (
     <BottomNavigation
+      barStyle={{ backgroundColor: '#620303' }}
       navigationState={{ index, routes }}
       onIndexChange={_handleIndexChange}
       renderScene={renderScene}

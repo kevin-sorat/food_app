@@ -98,8 +98,7 @@ export function getMenuPage() {
             </Modal>
 
             <View style={styles.headerContainer}>
-                <Headline style={styles.headerContent}>{i18n.t('chickenValley')}</Headline>
-                <Subheading>{i18n.t('pikePlaceMarket')}</Subheading>
+                <Image style={styles.bigPic} source={require('../assets/chicken_valley_logo.png')} />
             </View>
 
             <SectionList
@@ -115,16 +114,19 @@ export function getMenuPage() {
 }
 
 const styles = StyleSheet.create({
+    bigPic: {
+        width: 300,
+        height: 250,
+        resizeMode: 'contain',
+    },
     container: {
+        backgroundColor: '#911717',
         flex: 1,
         paddingTop: StatusBar.currentHeight,
-        marginHorizontal: 16
     },
     headerContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 10,
-        marginBottom: 10,
     },
     headerContent: {
         fontWeight: 500,
@@ -132,8 +134,9 @@ const styles = StyleSheet.create({
         fontFamily: 'lucida grande',
     },
     item: {
-        backgroundColor: '#bdc6ff',
+        backgroundColor: '#a74545',
         padding: 10,
+        marginHorizontal: 16,
         marginVertical: 8,
         flex: 1,
         flexDirection: 'row',
@@ -147,17 +150,21 @@ const styles = StyleSheet.create({
         borderRadius: 6,
     },
     name: {
+        color: '#E6E6E6',
         fontSize: 16,
         flex: 0.6,
         paddingLeft: 10,
         fontWeight: '600',
     },
     price: {
+        color: '#E6E6E6',
         fontSize: 16,
         flex: 0.2,
     },
     header: {
+        color: '#E6E6E6',
         fontSize: 24,
+        marginHorizontal: 16,
         marginVertical: 8,
         paddingTop: 16
     },
