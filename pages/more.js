@@ -20,6 +20,8 @@ if (isMobileApp) {
     });
 }
 
+var doordashURL = 'https://www.doordash.com/store/24117936?utm_source=mx_share';
+
 export function getMorePage() {
     return (
         <SafeAreaView style={styles.container}>
@@ -45,6 +47,16 @@ export function getMorePage() {
                 <View style={styles.rightSection}>
                     <Button icon='phone' mode='outlined' onPress={() =>  Linking.openURL(`tel:${phoneNumber}`)}>
                         {i18n.t('call')}
+                    </Button>
+                </View>
+            </View>
+            <View style={styles.section}>
+                <View style={styles.leftSection}>
+                    <Title>{i18n.t('delivery')}</Title>
+                </View>
+                <View style={styles.rightSection}>
+                    <Button icon='moped' mode='outlined' onPress={() =>  isMobileApp ? Linking.openURL(doordashURL) : window.open(doordashURL, '_blank')}>
+                        {i18n.t('doordash')}
                     </Button>
                 </View>
             </View>
