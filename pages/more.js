@@ -20,7 +20,8 @@ if (isMobileApp) {
     });
 }
 
-var doordashURL = 'https://www.doordash.com/store/24117936?utm_source=mx_share';
+// var doordashURL = 'https://www.doordash.com/store/24117936?utm_source=mx_share';
+var doordashURL = 'https://www.doordash.com/store/chicken-valley-seattle-24117936/';
 
 export function getMorePage() {
     return (
