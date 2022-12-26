@@ -40,6 +40,7 @@
     "drinks": "Drinks",
     
     "ch000_name": "ch000",
+    "ch000_price": "$2.99",
     "ch000_ingredients": "Chicken Meat, Flour, Egg yolks",
     "ch000_calories": "200Cal",
     "ch000_totalFat": "20g",
@@ -49,6 +50,7 @@
     "ch000_protein": "20g",
 
     "ch001_name": "Drum stick",
+    "ch001_price": "Regular: $2.95\nJumbo: $3.63",
     "ch001_ingredients": "Chicken Leg, Flour, Egg yolks",
     "ch001_calories": "--",
     "ch001_totalFat": "--",
@@ -58,6 +60,7 @@
     "ch001_protein": "--",
 
     "ch002_name": "Thigh",
+    "ch002_price": "Regular: $3.63\nJumbo: $4.54",
     "ch002_ingredients": "Chicken thigh, Flour, Egg yolks",
     "ch002_calories": "--",
     "ch002_totalFat": "--",
@@ -67,6 +70,7 @@
     "ch002_protein": "--",
 
     "ch003_name": "Wing",
+    "ch003_price": "Regular: $3.05\nJumbo: $3.45",
     "ch003_ingredients": "Chicken wing, Flour, Egg yolks",
     "ch003_calories": "--",
     "ch003_totalFat": "--",
@@ -76,6 +80,7 @@
     "ch003_protein": "--",
 
     "ch004_name": "Breast",
+    "ch004_price": "$9.99/lb",
     "ch004_ingredients": "Chicken breast, Flour, Egg yolks",
     "ch004_calories": "--",
     "ch004_totalFat": "--",
@@ -85,6 +90,7 @@
     "ch004_protein": "--",
 
     "ch005_name": "Strips",
+    "ch005_price": "$13.99/lb",
     "ch005_ingredients": "Chicken breast, Flour, Egg yolks",
     "ch005_calories": "--",
     "ch005_totalFat": "--",
@@ -94,6 +100,7 @@
     "ch005_protein": "--",
 
     "ch006_name": "Chicken stick",
+    "ch006_price": "$7.26",
     "ch006_ingredients": "Chicken breast, Flour, Egg yolks",
     "ch006_calories": "--",
     "ch006_totalFat": "--",
@@ -103,6 +110,7 @@
     "ch006_protein": "--",
 
     "ch007_name": "Spicy hot stick",
+    "ch007_price": "$7.26",
     "ch007_ingredients": "Chicken breast, Flour, Egg yolks",
     "ch007_calories": "--",
     "ch007_totalFat": "--",
@@ -112,6 +120,7 @@
     "ch007_protein": "--",
 
     "ch008_name": "Sesame stick",
+    "ch008_price": "$7.26",
     "ch008_ingredients": "Chicken breast, Flour, Egg yolks",
     "ch008_calories": "--",
     "ch008_totalFat": "--",
@@ -121,6 +130,7 @@
     "ch008_protein": "--",
 
     "ch009_name": "Chicken special",
+    "ch009_price": "$11.99",
     "ch009_ingredients": "Chicken strips, French Fries, Fountain Soda",
     "ch009_calories": "--",
     "ch009_totalFat": "--",
@@ -130,6 +140,7 @@
     "ch009_protein": "--",
 
     "ch010_name": "Chicken Karage",
+    "ch010_price": "$10.99/lb",
     "ch010_ingredients": "Chicken thigh, Flour, Egg yolks",
     "ch010_calories": "--",
     "ch010_totalFat": "--",
@@ -138,7 +149,8 @@
     "ch010_totalSugar": "--",
     "ch010_protein": "--",
 
-    "ch011_name": "Chicken Nuggets",
+    "ch011_name": "Chicken Nuggets (8 pcs)",
+    "ch011_price": "$6.80",
     "ch011_ingredients": "Chicken breast, Flour, Egg yolks",
     "ch011_calories": "--",
     "ch011_totalFat": "--",
@@ -148,6 +160,7 @@
     "ch011_protein": "--",
 
     "ce001_name": "Gizzards",
+    "ce001_price": "$9.99/lb",
     "ce001_ingredients": "Chicken gizzards, Flour, Egg yolks",
     "ce001_calories": "--",
     "ce001_totalFat": "--",
@@ -157,6 +170,7 @@
     "ce001_protein": "--",
 
     "ce002_name": "Livers",
+    "ce002_price": "$9.99/lb",
     "ce002_ingredients": "Chicken livers, Flour, Egg yolks",
     "ce002_calories": "--",
     "ce002_totalFat": "--",
@@ -166,6 +180,7 @@
     "ce002_protein": "--",
 
     "ce003_name": "Hearts",
+    "ce003_price": "$9.99/lb",
     "ce003_ingredients": "Chicken hearts, Flour, Egg yolks",
     "ce003_calories": "--",
     "ce003_totalFat": "--",

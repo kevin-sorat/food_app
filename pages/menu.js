@@ -31,25 +31,25 @@ export function getMenuPage() {
         {
             title: i18n.t('chicken'),
             data: [
-                {id: 'ch001', name: i18n.t('ch001_name'), price: '$6.99/lb', pic: require('../assets/chicken_drumstick.png')},
-                {id: 'ch002', name: i18n.t('ch002_name'), price: '$5.99/lb', pic: require('../assets/chicken_thigh.png')},
-                {id: 'ch003', name: i18n.t('ch003_name'), price: '$7.99/lb', pic: require('../assets/chicken_wing.png')},
-                // {id: 'ch004', name: i18n.t('ch004_name'), price: '$6.99/lb', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
-                {id: 'ch005', name: i18n.t('ch005_name'), price: '$9.68/lb', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'ch006', name: i18n.t('ch006_name'), price: '$7.26', pic: require('../assets/chicken_stick.png')},
-                {id: 'ch007', name: i18n.t('ch007_name'), price: '$7.26', pic: require('../assets/chicken_spicy_stick.png')},
-                {id: 'ch008', name: i18n.t('ch008_name'), price: '$7.26', pic: require('../assets/chicken_sesame_stick.png')},
-                {id: 'ch009', name: i18n.t('ch009_name'), price: '$7.82', pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
-                {id: 'ch010', name: i18n.t('ch010_name'), price: '$6.80', pic: require('../assets/chicken_karage.png')},
-                {id: 'ch011', name: i18n.t('ch011_name'), price: '$6.80', pic: require('../assets/chicken_nuggets.png')},
+                {id: 'ch001', name: i18n.t('ch001_name'), price: i18n.t('ch001_price'), pic: require('../assets/chicken_drumstick.png')},
+                {id: 'ch002', name: i18n.t('ch002_name'), price: i18n.t('ch002_price'), pic: require('../assets/chicken_thigh.png')},
+                {id: 'ch003', name: i18n.t('ch003_name'), price: i18n.t('ch003_price'), pic: require('../assets/chicken_wing.png')},
+                // {id: 'ch004', name: i18n.t('ch004_name'), price: i18n.t('ch004_price'), pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
+                {id: 'ch005', name: i18n.t('ch005_name'), price: i18n.t('ch005_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'ch006', name: i18n.t('ch006_name'), price: i18n.t('ch006_price'), pic: require('../assets/chicken_stick.png')},
+                {id: 'ch007', name: i18n.t('ch007_name'), price: i18n.t('ch007_price'), pic: require('../assets/chicken_spicy_stick.png')},
+                {id: 'ch008', name: i18n.t('ch008_name'), price: i18n.t('ch008_price'), pic: require('../assets/chicken_sesame_stick.png')},
+                {id: 'ch009', name: i18n.t('ch009_name'), price: i18n.t('ch009_price'), pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
+                {id: 'ch010', name: i18n.t('ch010_name'), price: i18n.t('ch010_price'), pic: require('../assets/chicken_karage.png')},
+                {id: 'ch011', name: i18n.t('ch011_name'), price: i18n.t('ch011_price'), pic: require('../assets/chicken_nuggets.png')},
             ]
         },
         {
             title: i18n.t('chickenEtc'),
             data: [
-                {id: 'ce001', name: i18n.t('ce001_name'), price: '$7.99/lb', pic: require('../assets/chicken_gizzards.png')},
-                {id: 'ce002', name: i18n.t('ce002_name'), price: '$7.99/lb', pic: require('../assets/chicken_livers.png')},
-                {id: 'ce003', name: i18n.t('ce003_name'), price: '$8.99/lb', pic: require('../assets/chicken_hearts.png')},
+                {id: 'ce001', name: i18n.t('ce001_name'), price: i18n.t('ce001_price'), pic: require('../assets/chicken_gizzards.png')},
+                {id: 'ce002', name: i18n.t('ce002_name'), price: i18n.t('ce002_price'), pic: require('../assets/chicken_livers.png')},
+                {id: 'ce003', name: i18n.t('ce003_name'), price: i18n.t('ce003_price'), pic: require('../assets/chicken_hearts.png')},
             ]
         },
         {
@@ -157,21 +157,21 @@ const styles = StyleSheet.create({
     smallPic: {
         width: 60,
         height: 60,
-        flex: 0.1,
+        flex: 0.2,
         borderRadius: 6,
         resizeMode: 'contain',
     },
     name: {
         color: '#E6E6E6',
         fontSize: 16,
-        flex: 0.8,
+        flex: 0.6,
         paddingLeft: 10,
         fontWeight: '600',
     },
     price: {
         color: '#E6E6E6',
         fontSize: 16,
-        flex: 0.1,
+        flex: 0.2,
     },
     header: {
         color: '#E6E6E6',
