@@ -55,35 +55,36 @@ export function getMenuPage() {
         {
             title: i18n.t('seafood'),
             data: [
-                {id: 'sf001', name: i18n.t('sf001_name'), price: '$7.99', pic: require('../assets/tempura_shrimps.png')},
-                {id: 'sf002', name: i18n.t('sf002_name'), price: '$5.99', pic: require('../assets/butterfly_shrimps.png')},
-                {id: 'sf003', name: i18n.t('sf003_name'), price: '$6.99', pic: require('../assets/codfish.png')},
-                {id: 'sf004', name: i18n.t('sf004_name'), price: '$5.99', pic: require('../assets/calamari.png')},
-                {id: 'sf005', name: i18n.t('sf005_name'), price: '$7.99', pic: require('../assets/seafood_sampler.png')},
-                {id: 'sf006', name: i18n.t('sf006_name'), price: '$1.00', pic: require('../assets/french_fries.png')},
+                {id: 'sf001', name: i18n.t('sf001_name'), price: i18n.t('sf001_price'), pic: require('../assets/tempura_shrimps.png')},
+                {id: 'sf002', name: i18n.t('sf002_name'), price: i18n.t('sf002_price'), pic: require('../assets/butterfly_shrimps.png')},
+                {id: 'sf003', name: i18n.t('sf003_name'), price: i18n.t('sf003_price'), pic: require('../assets/codfish.png')},
+                {id: 'sf004', name: i18n.t('sf004_name'), price: i18n.t('sf004_price'), pic: require('../assets/calamari.png')},
+                {id: 'sf005', name: i18n.t('sf005_name'), price: i18n.t('sf005_price'), pic: require('../assets/seafood_sampler.png')},
+                {id: 'sf006', name: i18n.t('sf006_name'), price: i18n.t('sf006_price'), pic: require('../assets/french_fries.png')},
             ]
         },
         {
             title: i18n.t('sideOrders'),
             data: [
-                {id: 'so001', name: i18n.t('so001_name'), price: '$2.25', pic: require('../assets/french_fries.png')},
-                {id: 'so002', name: i18n.t('so002_name'), price: '$3.63', pic: require('../assets/corndog.png')},
-                {id: 'so003', name: i18n.t('so003_name'), price: '$2.75', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'so004', name: i18n.t('so004_name'), price: '$8.49', pic: require('../assets/chicken_fried_rice.png')},
-                {id: 'so005', name: i18n.t('so005_name'), price: '$5.00', pic: require('../assets/crab_riceball.png')},
-                {id: 'so006', name: i18n.t('so006_name'), price: '$4.08', pic: require('../assets/spam_musubi.png')},
-                {id: 'so007', name: i18n.t('so007_name'), price: '$3.18', pic: require('../assets/churro.png')},
+                {id: 'so001', name: i18n.t('so001_name'), price: i18n.t('so001_price'), pic: require('../assets/french_fries.png')},
+                {id: 'so002', name: i18n.t('so002_name'), price: i18n.t('so002_price'), pic: require('../assets/corndog.png')},
+                {id: 'so003', name: i18n.t('so003_name'), price: i18n.t('so002_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'so004', name: i18n.t('so004_name'), price: i18n.t('so002_price'), pic: require('../assets/chicken_fried_rice.png')},
+                {id: 'so005', name: i18n.t('so005_name'), price: i18n.t('so002_price'), pic: require('../assets/crab_riceball.png')},
+                {id: 'so006', name: i18n.t('so006_name'), price: i18n.t('so002_price'), pic: require('../assets/spam_musubi.png')},
+                {id: 'so007', name: i18n.t('so007_name'), price: i18n.t('so002_price'), pic: require('../assets/churro.png')},
             ]
         },
         {
             title: i18n.t('drinks'),
             data: [
-                {id: 'dr001', name: i18n.t('dr001_name'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr002', name: i18n.t('dr002_name'), price: '$1.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr003', name: i18n.t('dr003_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr004', name: i18n.t('dr004_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr005', name: i18n.t('dr005_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr006', name: i18n.t('dr006_name'), price: '$2.99', pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr001', name: i18n.t('dr001_name'), price: i18n.t('dr001_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr002', name: i18n.t('dr002_name'), price: i18n.t('dr002_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr003', name: i18n.t('dr003_name'), price: i18n.t('dr003_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr004', name: i18n.t('dr004_name'), price: i18n.t('dr004_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr005', name: i18n.t('dr005_name'), price: i18n.t('dr005_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr006', name: i18n.t('dr006_name'), price: i18n.t('dr006_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
+                {id: 'dr007', name: i18n.t('dr007_name'), price: i18n.t('dr007_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
     ];    
@@ -123,8 +124,8 @@ export function getMenuPage() {
 
 const styles = StyleSheet.create({
     bigPic: {
-        width: 200,
-        height: 150,
+        width: 150,
+        height: 100,
         resizeMode: 'contain',
     },
     container: {

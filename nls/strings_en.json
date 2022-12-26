@@ -131,7 +131,7 @@
 
     "ch009_name": "Chicken special",
     "ch009_price": "$11.99",
-    "ch009_ingredients": "Chicken strips, French Fries, Fountain Soda",
+    "ch009_ingredients": "Chicken strips, French fries, Fountain soda (small)",
     "ch009_calories": "--",
     "ch009_totalFat": "--",
     "ch009_sodium": "--",
@@ -190,6 +190,7 @@
     "ce003_protein": "--",
 
     "sf001_name": "Tempura shrimps (5 pcs)",
+    "sf001_price": "$9.99",
     "sf001_ingredients": "Shrimps, Flour, Egg yolks",
     "sf001_calories": "--",
     "sf001_totalFat": "--",
@@ -199,6 +200,7 @@
     "sf001_protein": "--",
 
     "sf002_name": "Butterfly shrimps (5 pcs)",
+    "sf002_price": "$7.99",
     "sf002_ingredients": "Shrimps, Flour, Egg yolks",
     "sf002_calories": "--",
     "sf002_totalFat": "--",
@@ -208,6 +210,7 @@
     "sf002_protein": "--",
 
     "sf003_name": "Cod fish (3 pcs)",
+    "sf003_price": "$9.52",
     "sf003_ingredients": "Cod fish, Flour, Egg yolks",
     "sf003_calories": "--",
     "sf003_totalFat": "--",
@@ -216,7 +219,8 @@
     "sf003_totalSugar": "--",
     "sf003_protein": "--",
 
-    "sf004_name": "Calamari",
+    "sf004_name": "Calamari (10 pcs)",
+    "sf004_price": "$7.99",
     "sf004_ingredients": "Calamari, Flour, Egg yolks",
     "sf004_calories": "--",
     "sf004_totalFat": "--",
@@ -226,7 +230,8 @@
     "sf004_protein": "--",
 
     "sf005_name": "Seafood Sampler",
-    "sf005_ingredients": "Calamari, Butterfly shrimps, Tempura shrimps",
+    "sf005_price": "$9.99",
+    "sf005_ingredients": "5 Calamari, 2 Butterfly shrimps, 2 Tempura shrimps",
     "sf005_calories": "--",
     "sf005_totalFat": "--",
     "sf005_sodium": "--",
@@ -235,6 +240,7 @@
     "sf005_protein": "--",
 
     "sf006_name": "Add fries",
+    "sf006_price": "$3.50",
     "sf006_ingredients": "Potatoes, Salt",
     "sf006_calories": "--",
     "sf006_totalFat": "--",
@@ -244,6 +250,7 @@
     "sf006_protein": "--",
 
     "so001_name": "French fries",
+    "so001_price": "$3.63",
     "so001_ingredients": "Potatoes, Salt",
     "so001_calories": "--",
     "so001_totalFat": "--",
@@ -253,6 +260,7 @@
     "so001_protein": "--",
 
     "so002_name": "Corn dog",
+    "so002_price": "$3.63",
     "so002_ingredients": "Hot dog, Corn starch",
     "so002_calories": "--",
     "so002_totalFat": "--",
@@ -262,6 +270,7 @@
     "so002_protein": "--",
 
     "so003_name": "Steamed rice",
+    "so003_price": "$3.50",
     "so003_ingredients": "White rice",
     "so003_calories": "--",
     "so003_totalFat": "--",
@@ -271,6 +280,7 @@
     "so003_protein": "--",
 
     "so004_name": "Chicken fried rice",
+    "so004_price": "$8.49",
     "so004_ingredients": "White rice, Chicken thighs, Carrots, Green peas",
     "so004_calories": "--",
     "so004_totalFat": "--",
@@ -280,6 +290,7 @@
     "so004_protein": "--",
 
     "so005_name": "Crab rice ball",
+    "so005_price": "$5.00",
     "so005_ingredients": "White rice, Immitation crab",
     "so005_calories": "--",
     "so005_totalFat": "--",
@@ -289,6 +300,7 @@
     "so005_protein": "--",
 
     "so006_name": "Spam Musubi",
+    "so006_price": "$4.08",
     "so006_ingredients": "White rice, Spam, Seaweed",
     "so006_calories": "--",
     "so006_totalFat": "--",
@@ -298,6 +310,7 @@
     "so006_protein": "--",
 
     "so007_name": "Churro",
+    "so007_price": "$3.18",
     "so007_ingredients": "Flour, Cinnamon, Brown sugar",
     "so007_calories": "--",
     "so007_totalFat": "--",
@@ -307,6 +320,7 @@
     "so007_protein": "--",
 
     "dr001_name": "Bottle water",
+    "dr001_price": "$3.63",
     "dr001_ingredients": "Water",
     "dr001_calories": "--",
     "dr001_totalFat": "--",
@@ -315,7 +329,8 @@
     "dr001_totalSugar": "--",
     "dr001_protein": "--",
 
-    "dr002_name": "Fountain soda",
+    "dr002_name": "Bottled soda",
+    "dr002_price": "$3.63",
     "dr002_ingredients": "Water, Sugar",
     "dr002_calories": "--",
     "dr002_totalFat": "--",
@@ -324,7 +339,8 @@
     "dr002_totalSugar": "--",
     "dr002_protein": "--",
 
-    "dr003_name": "Bottle or can soda",
+    "dr003_name": "Canned soda",
+    "dr003_price": "$2.75",
     "dr003_ingredients": "Water, Sugar",
     "dr003_calories": "--",
     "dr003_totalFat": "--",
@@ -333,8 +349,9 @@
     "dr003_totalSugar": "--",
     "dr003_protein": "--",
 
-    "dr004_name": "Lemonade",
-    "dr004_ingredients": "Water, Sugar, Lemon",
+    "dr004_name": "Fountain soda",
+    "dr004_price": "Medium: $4.08\nLarge: $4.54",
+    "dr004_ingredients": "Water, Sugar",
     "dr004_calories": "--",
     "dr004_totalFat": "--",
     "dr004_sodium": "--",
@@ -342,8 +359,9 @@
     "dr004_totalSugar": "--",
     "dr004_protein": "--",
 
-    "dr005_name": "Pink lemonade",
-    "dr005_ingredients": "Water, Sugar, Lemon, Pink dye",
+    "dr005_name": "Lemonade",
+    "dr005_price": "Medium: $4.08\nLarge: $4.54",
+    "dr005_ingredients": "Water, Sugar, Lemon",
     "dr005_calories": "--",
     "dr005_totalFat": "--",
     "dr005_sodium": "--",
@@ -351,13 +369,24 @@
     "dr005_totalSugar": "--",
     "dr005_protein": "--",
 
-    "dr006_name": "Strawberry lemonade",
-    "dr006_ingredients": "Water, Sugar, Lemon, Strawberry",
+    "dr006_name": "Pink lemonade",
+    "dr006_price": "Medium: $4.08\nLarge: $4.54",
+    "dr006_ingredients": "Water, Sugar, Lemon, Pink dye",
     "dr006_calories": "--",
     "dr006_totalFat": "--",
     "dr006_sodium": "--",
     "dr006_totalCarbohydrate": "--",
     "dr006_totalSugar": "--",
-    "dr006_protein": "--"
+    "dr006_protein": "--",
+
+    "dr007_name": "Strawberry lemonade",
+    "dr007_price": "Medium: $4.08\nLarge: $4.54",
+    "dr007_ingredients": "Water, Sugar, Lemon, Strawberry",
+    "dr007_calories": "--",
+    "dr007_totalFat": "--",
+    "dr007_sodium": "--",
+    "dr007_totalCarbohydrate": "--",
+    "dr007_totalSugar": "--",
+    "dr007_protein": "--"
 
 }
