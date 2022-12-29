@@ -119,7 +119,7 @@
     "ch007_totalSugar": "--",
     "ch007_protein": "--",
 
-    "ch008_name": "Sesame stick",
+    "ch008_name": "Honey sesame stick",
     "ch008_price": "$7.26",
     "ch008_ingredients": "Chicken breast, Flour, Egg yolks",
     "ch008_calories": "--",
@@ -231,7 +231,7 @@
 
     "sf005_name": "Seafood Sampler",
     "sf005_price": "$9.99",
-    "sf005_ingredients": "5 Calamari, 2 Butterfly shrimps, 2 Tempura shrimps",
+    "sf005_ingredients": "Calamari (5 pcs), Butterfly shrimps (2 pcs), Tempura shrimps (2 pcs)",
     "sf005_calories": "--",
     "sf005_totalFat": "--",
     "sf005_sodium": "--",
@@ -350,7 +350,7 @@
     "dr003_protein": "--",
 
     "dr004_name": "Fountain soda",
-    "dr004_price": "Medium: $4.08\nLarge: $4.54",
+    "dr004_price": "Regular: $4.08\nLarge: $4.54",
     "dr004_ingredients": "Water, Sugar",
     "dr004_calories": "--",
     "dr004_totalFat": "--",
@@ -359,34 +359,14 @@
     "dr004_totalSugar": "--",
     "dr004_protein": "--",
 
-    "dr005_name": "Lemonade",
-    "dr005_price": "Medium: $4.08\nLarge: $4.54",
+    "dr005_name": "Lemonade\nPink lemonade\nStrawberry lemonade",
+    "dr005_price": "Regular: $4.08\nLarge: $4.54",
     "dr005_ingredients": "Water, Sugar, Lemon",
     "dr005_calories": "--",
     "dr005_totalFat": "--",
     "dr005_sodium": "--",
     "dr005_totalCarbohydrate": "--",
     "dr005_totalSugar": "--",
-    "dr005_protein": "--",
-
-    "dr006_name": "Pink lemonade",
-    "dr006_price": "Medium: $4.08\nLarge: $4.54",
-    "dr006_ingredients": "Water, Sugar, Lemon, Pink dye",
-    "dr006_calories": "--",
-    "dr006_totalFat": "--",
-    "dr006_sodium": "--",
-    "dr006_totalCarbohydrate": "--",
-    "dr006_totalSugar": "--",
-    "dr006_protein": "--",
-
-    "dr007_name": "Strawberry lemonade",
-    "dr007_price": "Medium: $4.08\nLarge: $4.54",
-    "dr007_ingredients": "Water, Sugar, Lemon, Strawberry",
-    "dr007_calories": "--",
-    "dr007_totalFat": "--",
-    "dr007_sodium": "--",
-    "dr007_totalCarbohydrate": "--",
-    "dr007_totalSugar": "--",
-    "dr007_protein": "--"
+    "dr005_protein": "--"
 
 }

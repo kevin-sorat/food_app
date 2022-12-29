@@ -28,6 +28,19 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
                 <Image style={styles.bigPic} source={selectedItemPic} />
                 <Headline style={styles.Ingredients}>{i18n.t('ingredients')}</Headline>
                 <Text>{selectedDetail.ingredients}</Text>
+            </View>
+        </ScrollView>
+    );
+
+    /*
+    return (
+        <ScrollView style={styles.detailView}>
+            <Headline>{selectedItemName}</Headline>
+            <Subheading>{selectedItemPrice}</Subheading>
+            <View style={styles.subDetailView}>
+                <Image style={styles.bigPic} source={selectedItemPic} />
+                <Headline style={styles.Ingredients}>{i18n.t('ingredients')}</Headline>
+                <Text>{selectedDetail.ingredients}</Text>
                 <Headline style={styles.nutrition}>{i18n.t('nutrition')}</Headline>
                 <DataTable>
                     <DataTable.Row>
@@ -58,6 +71,7 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
             </View>
         </ScrollView>
     );
+    */
 }
 
 const styles = StyleSheet.create({
@@ -73,8 +87,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     bigPic: {
-        width: 300,
-        height: 300,
+        width: 350,
+        height: 350,
         resizeMode: 'contain',
     },
     Ingredients: {

@@ -83,8 +83,6 @@ export function getMenuPage() {
                 {id: 'dr003', name: i18n.t('dr003_name'), price: i18n.t('dr003_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
                 {id: 'dr004', name: i18n.t('dr004_name'), price: i18n.t('dr004_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
                 {id: 'dr005', name: i18n.t('dr005_name'), price: i18n.t('dr005_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr006', name: i18n.t('dr006_name'), price: i18n.t('dr006_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
-                {id: 'dr007', name: i18n.t('dr007_name'), price: i18n.t('dr007_price'), pic: require('../assets/800px_COLOURBOX9177179.jpeg')},
             ]
         },
     ];    
