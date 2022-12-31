@@ -14,7 +14,7 @@ Linking.createURL('th');
 
 i18n.translations = {
   en: require('./nls/strings_en.json'),
-  ja: require('./nls/strings_ja.json'),
+  //ja: require('./nls/strings_ja.json'),
   th: require('./nls/strings_th.json'),
 };
 

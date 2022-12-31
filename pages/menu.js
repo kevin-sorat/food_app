@@ -39,9 +39,10 @@ export function getMenuPage() {
                 {id: 'ch006', name: i18n.t('ch006_name'), price: i18n.t('ch006_price'), pic: require('../assets/chicken_stick.png')},
                 {id: 'ch007', name: i18n.t('ch007_name'), price: i18n.t('ch007_price'), pic: require('../assets/chicken_spicy_stick.png')},
                 {id: 'ch008', name: i18n.t('ch008_name'), price: i18n.t('ch008_price'), pic: require('../assets/chicken_sesame_stick.png')},
-                {id: 'ch009', name: i18n.t('ch009_name'), price: i18n.t('ch009_price'), pic: require('../assets/icon.png')},
+                {id: 'ch009', name: i18n.t('ch009_name'), price: i18n.t('ch009_price'), pic: require('../assets/chicken_nuggets.png')},
                 {id: 'ch010', name: i18n.t('ch010_name'), price: i18n.t('ch010_price'), pic: require('../assets/chicken_karage.png')},
-                {id: 'ch011', name: i18n.t('ch011_name'), price: i18n.t('ch011_price'), pic: require('../assets/chicken_nuggets.png')},
+                {id: 'ch011', name: i18n.t('ch011_name'), price: i18n.t('ch011_price'), pic: require('../assets/chicken_karage_rice_bowl.png')},
+                {id: 'ch012', name: i18n.t('ch012_name'), price: i18n.t('ch012_price'), pic: require('../assets/icon.png')},
             ]
         },
         {
@@ -68,11 +69,14 @@ export function getMenuPage() {
             data: [
                 {id: 'so001', name: i18n.t('so001_name'), price: i18n.t('so001_price'), pic: require('../assets/french_fries.png')},
                 {id: 'so002', name: i18n.t('so002_name'), price: i18n.t('so002_price'), pic: require('../assets/corndog.png')},
-                {id: 'so003', name: i18n.t('so003_name'), price: i18n.t('so003_price'), pic: require('../assets/icon.png')},
+                {id: 'so003', name: i18n.t('so003_name'), price: i18n.t('so003_price'), pic: require('../assets/steamed_rice.png')},
                 {id: 'so004', name: i18n.t('so004_name'), price: i18n.t('so004_price'), pic: require('../assets/chicken_fried_rice.png')},
                 {id: 'so005', name: i18n.t('so005_name'), price: i18n.t('so005_price'), pic: require('../assets/crab_riceball.png')},
                 {id: 'so006', name: i18n.t('so006_name'), price: i18n.t('so006_price'), pic: require('../assets/spam_musubi.png')},
-                {id: 'so007', name: i18n.t('so007_name'), price: i18n.t('so007_price'), pic: require('../assets/churro.png')},
+                {id: 'so007', name: i18n.t('so007_name'), price: i18n.t('so007_price'), pic: require('../assets/icon.png')},
+                {id: 'so008', name: i18n.t('so008_name'), price: i18n.t('so008_price'), pic: require('../assets/icon.png')},
+                {id: 'so009', name: i18n.t('so009_name'), price: i18n.t('so009_price'), pic: require('../assets/icon.png')},
+                {id: 'so010', name: i18n.t('so010_name'), price: i18n.t('so010_price'), pic: require('../assets/churro.png')},
             ]
         },
         {

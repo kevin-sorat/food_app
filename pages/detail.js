@@ -11,7 +11,7 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
 
     const selectedDetail = {
         name: i18n.t(selectedItemID + "_name"),
-        ingredients: i18n.t(selectedItemID + "_ingredients"),
+        description: i18n.t(selectedItemID + "_description"),
         calories: i18n.t(selectedItemID + "_calories"),
         totalFat: i18n.t(selectedItemID + "_totalFat"),
         sodium: i18n.t(selectedItemID + "_sodium"),
@@ -26,8 +26,8 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
             <Subheading>{selectedItemPrice}</Subheading>
             <View style={styles.subDetailView}>
                 <Image style={styles.bigPic} source={selectedItemPic} />
-                <Headline style={styles.Ingredients}>{i18n.t('ingredients')}</Headline>
-                <Text>{selectedDetail.ingredients}</Text>
+                <Headline style={styles.description}>{i18n.t('description')}</Headline>
+                <Text>{selectedDetail.description}</Text>
             </View>
         </ScrollView>
     );
@@ -39,8 +39,8 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
             <Subheading>{selectedItemPrice}</Subheading>
             <View style={styles.subDetailView}>
                 <Image style={styles.bigPic} source={selectedItemPic} />
-                <Headline style={styles.Ingredients}>{i18n.t('ingredients')}</Headline>
-                <Text>{selectedDetail.ingredients}</Text>
+                <Headline style={styles.description}>{i18n.t('description')}</Headline>
+                <Text>{selectedDetail.description}</Text>
                 <Headline style={styles.nutrition}>{i18n.t('nutrition')}</Headline>
                 <DataTable>
                     <DataTable.Row>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         height: 350,
         resizeMode: 'contain',
     },
-    Ingredients: {
+    description: {
         fontWeight: '300',
     },
     nutrition: {
