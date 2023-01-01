@@ -37,6 +37,7 @@
     "chickenEtc": "Chicken etc.",
     "seafood": "Seafood",
     "sideOrders": "Side orders",
+    "sauces": "Sauces",
     "drinks": "Drinks",
     
     "ch000_name": "ch000",
@@ -51,7 +52,7 @@
 
     "ch001_name": "Drum stick",
     "ch001_price": "Regular: $2.95\nJumbo: $3.63",
-    "ch001_description": "Chicken Leg, Flour, Egg yolks",
+    "ch001_description": "--",
     "ch001_calories": "--",
     "ch001_totalFat": "--",
     "ch001_sodium": "--",
@@ -61,7 +62,7 @@
 
     "ch002_name": "Thigh",
     "ch002_price": "Regular: $3.63\nJumbo: $4.54",
-    "ch002_description": "Chicken thigh, Flour, Egg yolks",
+    "ch002_description": "--",
     "ch002_calories": "--",
     "ch002_totalFat": "--",
     "ch002_sodium": "--",
@@ -71,7 +72,7 @@
 
     "ch003_name": "Wing",
     "ch003_price": "Regular: $2.95\nJumbo: $3.45",
-    "ch003_description": "Chicken wing, Flour, Egg yolks",
+    "ch003_description": "--",
     "ch003_calories": "--",
     "ch003_totalFat": "--",
     "ch003_sodium": "--",
@@ -81,7 +82,7 @@
 
     "ch004_name": "Breast",
     "ch004_price": "$9.99/lb",
-    "ch004_description": "Chicken breast, Flour, Egg yolks",
+    "ch004_description": "--",
     "ch004_calories": "--",
     "ch004_totalFat": "--",
     "ch004_sodium": "--",
@@ -91,7 +92,7 @@
 
     "ch005_name": "Strips",
     "ch005_price": "$13.99/lb",
-    "ch005_description": "Chicken breast, Flour, Egg yolks",
+    "ch005_description": "--",
     "ch005_calories": "--",
     "ch005_totalFat": "--",
     "ch005_sodium": "--",
@@ -101,7 +102,7 @@
 
     "ch006_name": "Chicken stick",
     "ch006_price": "$7.26",
-    "ch006_description": "Chicken breast, Flour, Egg yolks",
+    "ch006_description": "--",
     "ch006_calories": "--",
     "ch006_totalFat": "--",
     "ch006_sodium": "--",
@@ -111,7 +112,7 @@
 
     "ch007_name": "Spicy hot stick",
     "ch007_price": "$7.26",
-    "ch007_description": "Chicken breast, Flour, Egg yolks",
+    "ch007_description": "--",
     "ch007_calories": "--",
     "ch007_totalFat": "--",
     "ch007_sodium": "--",
@@ -121,7 +122,7 @@
 
     "ch008_name": "Honey sesame stick",
     "ch008_price": "$7.26",
-    "ch008_description": "Chicken breast, Flour, Egg yolks",
+    "ch008_description": "--",
     "ch008_calories": "--",
     "ch008_totalFat": "--",
     "ch008_sodium": "--",
@@ -131,7 +132,7 @@
 
     "ch009_name": "Chicken nuggets (8 pcs)",
     "ch009_price": "$6.80",
-    "ch009_description": "Chicken breast, Flour, Egg yolks",
+    "ch009_description": "--",
     "ch009_calories": "--",
     "ch009_totalFat": "--",
     "ch009_sodium": "--",
@@ -141,7 +142,7 @@
 
     "ch010_name": "Chicken karage",
     "ch010_price": "$10.99/lb",
-    "ch010_description": "Chicken thigh, Flour, Egg yolks",
+    "ch010_description": "--",
     "ch010_calories": "--",
     "ch010_totalFat": "--",
     "ch010_sodium": "--",
@@ -151,7 +152,7 @@
 
     "ch011_name": "Chicken karage rice bowl",
     "ch011_price": "$10.99",
-    "ch011_description": "Chicken breast, Flour, Egg yolks, steamed rice",
+    "ch011_description": "--",
     "ch011_calories": "--",
     "ch011_totalFat": "--",
     "ch011_sodium": "--",
@@ -171,7 +172,7 @@
 
     "ce001_name": "Gizzards",
     "ce001_price": "$9.99/lb",
-    "ce001_description": "Chicken gizzards, Flour, Egg yolks",
+    "ce001_description": "--",
     "ce001_calories": "--",
     "ce001_totalFat": "--",
     "ce001_sodium": "--",
@@ -181,7 +182,7 @@
 
     "ce002_name": "Livers",
     "ce002_price": "$9.99/lb",
-    "ce002_description": "Chicken livers, Flour, Egg yolks",
+    "ce002_description": "--",
     "ce002_calories": "--",
     "ce002_totalFat": "--",
     "ce002_sodium": "--",
@@ -191,7 +192,7 @@
 
     "ce003_name": "Hearts",
     "ce003_price": "$9.99/lb",
-    "ce003_description": "Chicken hearts, Flour, Egg yolks",
+    "ce003_description": "--",
     "ce003_calories": "--",
     "ce003_totalFat": "--",
     "ce003_sodium": "--",
@@ -201,7 +202,7 @@
 
     "sf001_name": "Tempura shrimps (5 pcs)",
     "sf001_price": "$9.99",
-    "sf001_description": "Shrimps, Flour, Egg yolks",
+    "sf001_description": "--",
     "sf001_calories": "--",
     "sf001_totalFat": "--",
     "sf001_sodium": "--",
@@ -211,7 +212,7 @@
 
     "sf002_name": "Butterfly shrimps (5 pcs)",
     "sf002_price": "$7.99",
-    "sf002_description": "Shrimps, Flour, Egg yolks",
+    "sf002_description": "--",
     "sf002_calories": "--",
     "sf002_totalFat": "--",
     "sf002_sodium": "--",
@@ -221,7 +222,7 @@
 
     "sf003_name": "Cod fish (3 pcs)",
     "sf003_price": "$9.52",
-    "sf003_description": "Cod fish, Flour, Egg yolks",
+    "sf003_description": "--",
     "sf003_calories": "--",
     "sf003_totalFat": "--",
     "sf003_sodium": "--",
@@ -231,7 +232,7 @@
 
     "sf004_name": "Calamari (10 pcs)",
     "sf004_price": "$7.99",
-    "sf004_description": "Calamari, Flour, Egg yolks",
+    "sf004_description": "--",
     "sf004_calories": "--",
     "sf004_totalFat": "--",
     "sf004_sodium": "--",
@@ -251,7 +252,7 @@
 
     "sf006_name": "Add fries",
     "sf006_price": "$3.50",
-    "sf006_description": "Potatoes, Salt",
+    "sf006_description": "--",
     "sf006_calories": "--",
     "sf006_totalFat": "--",
     "sf006_sodium": "--",
@@ -261,7 +262,7 @@
 
     "so001_name": "French fries",
     "so001_price": "$3.63",
-    "so001_description": "Potatoes, Salt",
+    "so001_description": "--",
     "so001_calories": "--",
     "so001_totalFat": "--",
     "so001_sodium": "--",
@@ -271,7 +272,7 @@
 
     "so002_name": "Corn dog",
     "so002_price": "$3.63",
-    "so002_description": "Hot dog, Corn starch",
+    "so002_description": "--",
     "so002_calories": "--",
     "so002_totalFat": "--",
     "so002_sodium": "--",
@@ -281,7 +282,7 @@
 
     "so003_name": "Steamed rice",
     "so003_price": "$3.50",
-    "so003_description": "White rice",
+    "so003_description": "--",
     "so003_calories": "--",
     "so003_totalFat": "--",
     "so003_sodium": "--",
@@ -291,7 +292,7 @@
 
     "so004_name": "Chicken fried rice",
     "so004_price": "$8.49",
-    "so004_description": "White rice, Chicken thighs, Carrots, Green peas",
+    "so004_description": "--",
     "so004_calories": "--",
     "so004_totalFat": "--",
     "so004_sodium": "--",
@@ -301,7 +302,7 @@
 
     "so005_name": "Crab rice ball",
     "so005_price": "$5.00",
-    "so005_description": "White rice, Immitation crab",
+    "so005_description": "--",
     "so005_calories": "--",
     "so005_totalFat": "--",
     "so005_sodium": "--",
@@ -311,7 +312,7 @@
 
     "so006_name": "Spam Musubi",
     "so006_price": "$4.08",
-    "so006_description": "White rice, Spam, Seaweed",
+    "so006_description": "--",
     "so006_calories": "--",
     "so006_totalFat": "--",
     "so006_sodium": "--",
@@ -351,7 +352,7 @@
 
     "so010_name": "Churro",
     "so010_price": "$3.18",
-    "so010_description": "Flour, Cinnamon, Brown sugar",
+    "so010_description": "--",
     "so010_calories": "--",
     "so010_totalFat": "--",
     "so010_sodium": "--",
@@ -359,9 +360,19 @@
     "so010_totalSugar": "--",
     "so010_protein": "--",
 
-    "dr001_name": "Bottle water",
+    "sa001_name": "BBQ\nCocktail\nHoney mustard\nRanch\nSpicy\nSpicy mayo\nSweet and sour\nTartar\n",
+    "sa001_price": "$0.50",
+    "sa001_description": "--",
+    "sa001_calories": "--",
+    "sa001_totalFat": "--",
+    "sa001_sodium": "--",
+    "sa001_totalCarbohydrate": "--",
+    "sa001_totalSugar": "--",
+    "sa001_protein": "--",
+
+    "dr001_name": "Bottled water",
     "dr001_price": "$3.63",
-    "dr001_description": "Water",
+    "dr001_description": "--",
     "dr001_calories": "--",
     "dr001_totalFat": "--",
     "dr001_sodium": "--",
@@ -371,7 +382,7 @@
 
     "dr002_name": "Bottled soda",
     "dr002_price": "$3.63",
-    "dr002_description": "Water, Sugar",
+    "dr002_description": "--",
     "dr002_calories": "--",
     "dr002_totalFat": "--",
     "dr002_sodium": "--",
@@ -381,7 +392,7 @@
 
     "dr003_name": "Canned soda",
     "dr003_price": "$2.75",
-    "dr003_description": "Water, Sugar",
+    "dr003_description": "--",
     "dr003_calories": "--",
     "dr003_totalFat": "--",
     "dr003_sodium": "--",
@@ -391,7 +402,7 @@
 
     "dr004_name": "Fountain soda",
     "dr004_price": "Regular: $4.08\nLarge: $4.54",
-    "dr004_description": "Water, Sugar",
+    "dr004_description": "--",
     "dr004_calories": "--",
     "dr004_totalFat": "--",
     "dr004_sodium": "--",
@@ -401,7 +412,7 @@
 
     "dr005_name": "Lemonade\nPink lemonade\nStrawberry lemonade",
     "dr005_price": "Regular: $4.08\nLarge: $4.54",
-    "dr005_description": "Water, Sugar, Lemon",
+    "dr005_description": "--",
     "dr005_calories": "--",
     "dr005_totalFat": "--",
     "dr005_sodium": "--",
