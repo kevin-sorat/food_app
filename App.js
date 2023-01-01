@@ -54,7 +54,7 @@ const MainComponent = () => {
   const navigationRoutes = [
     // { key: 'home', title: i18n.t('home'), icon: 'home' },
     { key: 'menu', title: i18n.t('menu'), icon: 'food-fork-drink' },
-    { key: 'translate', title: i18n.t('translate'), icon: 'translate' },
+    // { key: 'translate', title: i18n.t('translate'), icon: 'translate' },
     { key: 'more', title: i18n.t('more'), icon: 'dots-horizontal' },
   ];
 
