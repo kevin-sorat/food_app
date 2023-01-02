@@ -1,8 +1,8 @@
 {
   "expo": {
-    "scheme": "FoodApp",
-    "name": "FoodApp",
-    "slug": "FoodApp",
+    "scheme": "ChickenValleyApp",
+    "name": "ChickenValleyApp",
+    "slug": "ChickenValleyApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

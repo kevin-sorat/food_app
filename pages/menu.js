@@ -82,7 +82,7 @@ export function getMenuPage() {
         {
             title: i18n.t('sauces'),
             data: [
-                {id: 'sa001', name: i18n.t('sa001_name'), price: i18n.t('sa001_price'), pic: require('../assets/icon.png')},
+                {id: 'sa001', name: i18n.t('sa001_name'), price: i18n.t('sa001_price'), pic: require('../assets/sauces.png')},
             ]
         },
         {
