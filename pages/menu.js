@@ -51,6 +51,7 @@ export function getMenuPage() {
                 {id: 'ce001', name: i18n.t('ce001_name'), price: i18n.t('ce001_price'), pic: require('../assets/chicken_gizzards.png')},
                 {id: 'ce002', name: i18n.t('ce002_name'), price: i18n.t('ce002_price'), pic: require('../assets/chicken_livers.png')},
                 {id: 'ce003', name: i18n.t('ce003_name'), price: i18n.t('ce003_price'), pic: require('../assets/chicken_hearts.png')},
+                {id: 'ce004', name: i18n.t('ce004_name'), price: i18n.t('ce004_price'), pic: require('../assets/icon.png')},
             ]
         },
         {

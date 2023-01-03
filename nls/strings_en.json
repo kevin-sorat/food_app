@@ -162,7 +162,7 @@
 
     "ch012_name": "Chicken special",
     "ch012_price": "$11.99",
-    "ch012_description": "Chicken strips (~6 pcs), French fries, Fountain soda (small)",
+    "ch012_description": "Chicken strips (6-7 pcs), French fries, Fountain soda (small)",
     "ch012_calories": "--",
     "ch012_totalFat": "--",
     "ch012_sodium": "--",
@@ -199,6 +199,16 @@
     "ce003_totalCarbohydrate": "--",
     "ce003_totalSugar": "--",
     "ce003_protein": "--",
+
+    "ce004_name": "Giblet sampler",
+    "ce004_price": "$4.54",
+    "ce004_description": "Roughly 0.5lb of any combination of gizzards, livers, and hearts",
+    "ce004_calories": "--",
+    "ce004_totalFat": "--",
+    "ce004_sodium": "--",
+    "ce004_totalCarbohydrate": "--",
+    "ce004_totalSugar": "--",
+    "ce004_protein": "--",
 
     "sf001_name": "Tempura shrimps (5 pcs)",
     "sf001_price": "$9.99",
