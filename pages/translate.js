@@ -28,6 +28,24 @@ export function getTranslatePage() {
                 style={{ width: 280, backgroundColor: '#e1e1e1' }}
                 selectedValue={highlightedLanguage}
                 onValueChange={(value) => _handleValueChange(value)}>
+            <Picker.Item label='English' value='en' />
+            <Picker.Item label='Española' value='es' />
+          </Picker>
+          <View style={styles.toolbar}>
+            <Button style={styles.applyButton} title={i18n.t('apply')} 
+                onPress={_handlePressDone} disabled={highlightedLanguage === selectedLanguage} />
+          </View>
+        </SafeAreaView>
+    );
+
+    /*
+    return (
+        <SafeAreaView style={styles.container}>
+            <Headline style={styles.content}>{i18n.t('language')}</Headline>
+            <Picker
+                style={{ width: 280, backgroundColor: '#e1e1e1' }}
+                selectedValue={highlightedLanguage}
+                onValueChange={(value) => _handleValueChange(value)}>
             <Picker.Item label='中文' value='ch' />
             <Picker.Item label='English' value='en' />
             <Picker.Item label='日本語' value='ja' />
@@ -41,6 +59,7 @@ export function getTranslatePage() {
           </View>
         </SafeAreaView>
     );
+    */
 }
 
 const styles = StyleSheet.create({
