@@ -381,7 +381,7 @@
     "sa001_protein": "--",
 
     "dr001_name": "Bottled water",
-    "dr001_price": "$3.63",
+    "dr001_price": "Small: $3.16\nMedium: $3.63\nLarge: $4.54",
     "dr001_description": "--",
     "dr001_calories": "--",
     "dr001_totalFat": "--",
@@ -401,7 +401,7 @@
     "dr002_protein": "--",
 
     "dr003_name": "Canned soda",
-    "dr003_price": "$2.75",
+    "dr003_price": "$2.50",
     "dr003_description": "--",
     "dr003_calories": "--",
     "dr003_totalFat": "--",
