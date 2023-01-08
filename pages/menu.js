@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal, View } from 'react-native';
+import { Animated, StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal, View } from 'react-native';
 import { Headline, Subheading } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
 import { getDetailPage } from './detail.js';
 import i18n from 'i18n-js';
 // import chicken from '../assets/800px_COLOURBOX9177179.jpeg';
+
+const LOGO_MAX_WIDTH = 250;
+const HEADER_MAX_HEIGHT = 200;
+const HEADER_MIN_HEIGHT = 60;
+const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
 export function getMenuPage() {
     const [modalVisible, setModalVisible] = useState(false);
@@ -12,6 +17,13 @@ export function getMenuPage() {
     const [selectedItemName, setSelectedItemName] = useState('');
     const [selectedItemPrice, setSelectedItemPrice] = useState('');
     const [selectedItemPic, setSelectedItemPic] = useState('');
+    const [scrollY, setScrollY] = useState(new Animated.Value(0));
+
+    const headerHeight = scrollY.interpolate({
+        inputRange: [0, HEADER_SCROLL_DISTANCE],
+        outputRange: [HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
+        extrapolate: 'clamp',
+    });
 
     const Item = ({ title }) => (
         <TouchableOpacity style={styles.item} onPress={() => {
@@ -115,16 +127,21 @@ export function getMenuPage() {
                 </SafeAreaView>
             </Modal>
 
-            <View style={styles.headerContainer}>
+            <Animated.View style={[styles.headerContainer, {height: headerHeight}]}>
                 <Image style={styles.bigPic} source={require('../assets/chicken_valley_logo.png')} />
-            </View>
+            </Animated.View>
 
-            <SectionList
+            <Animated.SectionList
+                style={[styles.scrollViewContent, {marginTop: headerHeight}]}
                 sections={MENU_DATA}
                 keyExtractor={(item, index) => item + index}
                 renderItem={({ item }) => <Item title={item} />}
                 renderSectionHeader={({ section: { title } }) => (
                     <Text style={styles.header}>{title}</Text>
+                )}
+                scrollEventThrottle={16}
+                onScroll={Animated.event(
+                    [{nativeEvent: {contentOffset: {y: scrollY}}}]
                 )}
             />
       </SafeAreaView>
@@ -132,11 +149,6 @@ export function getMenuPage() {
 }
 
 const styles = StyleSheet.create({
-    bigPic: {
-        width: 150,
-        height: 100,
-        resizeMode: 'contain',
-    },
     container: {
         backgroundColor: '#911717',
         flex: 1,
@@ -147,11 +159,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: 8,
         paddingBottom: 8,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        overflow: 'hidden',
+        flex: 1,
     },
-    headerContent: {
-        fontWeight: 500,
-        fontSize: 30,
-        fontFamily: 'lucida grande',
+    bigPic: {
+        width: LOGO_MAX_WIDTH,
+        height: HEADER_MAX_HEIGHT,
+        resizeMode: 'contain',
+        flex: 1,
+    },
+    scrollViewContent: {
+        flex: 1,
     },
     item: {
         backgroundColor: '#a74545',
