@@ -8,7 +8,7 @@ import i18n from 'i18n-js';
 
 const LOGO_MAX_WIDTH = 250;
 const HEADER_MAX_HEIGHT = 200;
-const HEADER_MIN_HEIGHT = 60;
+const HEADER_MIN_HEIGHT = 80;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
 export function getMenuPage() {
