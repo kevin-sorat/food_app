@@ -20,14 +20,16 @@ export function getDetailPage(selectedItemID, selectedItemName, selectedItemPric
         protein: i18n.t(selectedItemID + "_protein")
     };
 
+    let isDescription = (selectedDetail.description && selectedDetail.description !== "--" ); 
+
     return (
         <ScrollView style={styles.detailView}>
             <Headline>{selectedItemName}</Headline>
             <Subheading>{selectedItemPrice}</Subheading>
             <View style={styles.subDetailView}>
                 <Image style={styles.bigPic} source={selectedItemPic} />
-                <Headline style={styles.description}>{i18n.t('description')}</Headline>
-                <Text>{selectedDetail.description}</Text>
+                { isDescription ? <Headline style={styles.description}>{i18n.t('description')}</Headline> : null }
+                { isDescription ? <Text>{selectedDetail.description}</Text> : null }
             </View>
         </ScrollView>
     );

@@ -6,9 +6,9 @@ import { getDetailPage } from './detail.js';
 import i18n from 'i18n-js';
 // import chicken from '../assets/800px_COLOURBOX9177179.jpeg';
 
-const LOGO_MAX_WIDTH = 300;
-const HEADER_MAX_HEIGHT = 250;
-const HEADER_MIN_HEIGHT = 100;
+const LOGO_MAX_WIDTH = 280;
+const HEADER_MAX_HEIGHT = 240;
+const HEADER_MIN_HEIGHT = 90;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
 export function getMenuPage() {
