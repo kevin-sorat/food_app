@@ -22,6 +22,7 @@ i18n.translations = {
 i18n.locale = 'en'; // Localization.locale;
 i18n.fallbacks = true;
 var hasLocaleBeenSetByURL = false;
+var parsedUrl = "";
 
 const useMount = func => useEffect(() => func(), []);
 
@@ -52,6 +53,26 @@ const MainComponent = () => {
   //console.log("MainComponent: i18n.locale: " + i18n.locale);
   //console.log("MainComponent: i18n.t('home'): " + i18n.t('home'));
 
+  const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.locale);
+  const { url: initialUrl, processing } = useInitialURL();
+  console.log("The deep link is: " + initialUrl);
+  if (initialUrl && !hasLocaleBeenSetByURL) {
+    parsedUrl = Linking.parse(initialUrl);
+    if (parsedUrl.queryParams.language && i18n.locale !== parsedUrl.queryParams.language) {
+      //console.log("selectedLanguage: " + selectedLanguage);
+      //console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
+      i18n.locale = parsedUrl.queryParams.language;
+      setSelectedLanguage(i18n.locale);
+      hasLocaleBeenSetByURL = true;
+    } else if (parsedUrl.path && i18n.locale !== parsedUrl.path) {
+      //console.log("selectedLanguage: " + selectedLanguage);
+      //console.log("parsedUrl.path: " + parsedUrl.path);
+      i18n.locale = parsedUrl.path;
+      setSelectedLanguage(i18n.locale);
+      hasLocaleBeenSetByURL = true;
+    }
+  }
+
   const navigationRoutes = [
     // { key: 'home', title: i18n.t('home'), icon: 'home' },
     { key: 'menu', title: i18n.t('menu'), icon: 'food-fork-drink' },
@@ -60,13 +81,12 @@ const MainComponent = () => {
   ];
 
   const HomeRoute = () => getHomePage();
-  const MenuRoute = () => getMenuPage();
+  const MenuRoute = () => getMenuPage(parsedUrl);
   const TranslateRoute = () => getTranslatePage();
   const MoreRoute = () => getMorePage();
 
   const [index, setIndex] = React.useState(0);
   const [routes, setRoutes] = React.useState(navigationRoutes);
-  const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.locale);
 
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
@@ -82,25 +102,6 @@ const MainComponent = () => {
   React.useEffect(() => {
     setRoutes(navigationRoutes);
   }, [i18n.locale]);
-
-  const { url: initialUrl, processing } = useInitialURL();
-  console.log("The deep link is: " + initialUrl);
-  if (initialUrl && !hasLocaleBeenSetByURL) {
-    const parsedUrl = Linking.parse(initialUrl);
-    if (parsedUrl.queryParams.language && i18n.locale !== parsedUrl.queryParams.language) {
-      //console.log("selectedLanguage: " + selectedLanguage);
-      //console.log("parsedUrl.queryParams.language: " + parsedUrl.queryParams.language);
-      i18n.locale = parsedUrl.queryParams.language;
-      setSelectedLanguage(i18n.locale);
-      hasLocaleBeenSetByURL = true;
-    } else if (parsedUrl.path && i18n.locale !== parsedUrl.path) {
-      //console.log("selectedLanguage: " + selectedLanguage);
-      //console.log("parsedUrl.path: " + parsedUrl.path);
-      i18n.locale = parsedUrl.path;
-      setSelectedLanguage(i18n.locale);
-      hasLocaleBeenSetByURL = true;
-    }
-  }
 
   return (
     <BottomNavigation

@@ -3,31 +3,46 @@ import { StyleSheet, Image, View, ScrollView } from 'react-native';
 import { Headline, Subheading, Text, DataTable } from 'react-native-paper';
 import i18n from 'i18n-js';
 
-export function getDetailPage(selectedItemID, selectedItemName, selectedItemPrice, selectedItemPic) {
+export function getDetailPage(selectedItem) {
 
-    if (!selectedItemID) {
+    if (!selectedItem) {
         return;
     }
 
     const selectedDetail = {
-        name: i18n.t(selectedItemID + "_name"),
-        description: i18n.t(selectedItemID + "_description"),
-        calories: i18n.t(selectedItemID + "_calories"),
-        totalFat: i18n.t(selectedItemID + "_totalFat"),
-        sodium: i18n.t(selectedItemID + "_sodium"),
-        totalCarbohydrate: i18n.t(selectedItemID + "_totalCarbohydrate"),
-        totalSugar: i18n.t(selectedItemID + "_totalSugar"),
-        protein: i18n.t(selectedItemID + "_protein")
+        name: i18n.t(selectedItem.id + "_name"),
+        description: i18n.t(selectedItem.id + "_description"),
+        calories: i18n.t(selectedItem.id + "_calories"),
+        totalFat: i18n.t(selectedItem.id + "_totalFat"),
+        sodium: i18n.t(selectedItem.id + "_sodium"),
+        totalCarbohydrate: i18n.t(selectedItem.id + "_totalCarbohydrate"),
+        totalSugar: i18n.t(selectedItem.id + "_totalSugar"),
+        protein: i18n.t(selectedItem.id + "_protein")
     };
 
     let isDescription = (selectedDetail.description && selectedDetail.description !== "--" ); 
 
     return (
         <ScrollView style={styles.detailView}>
-            <Headline>{selectedItemName}</Headline>
-            <Subheading>{selectedItemPrice}</Subheading>
+            <Headline>{selectedItem.name}</Headline>
+            { !selectedItem.size_1 && selectedItem.price_1
+                ? <Subheading>{selectedItem.price_1}</Subheading>
+                : null
+            }
+            { selectedItem.size_1 && selectedItem.price_1
+                ? <Subheading>{selectedItem.size_1}: {selectedItem.price_1}</Subheading>
+                : null
+            }
+            { selectedItem.size_2 && selectedItem.price_2
+                ? <Subheading>{selectedItem.size_2}: {selectedItem.price_2}</Subheading>
+                : null
+            }
+            { selectedItem.size_3 && selectedItem.price_3
+                ? <Subheading>{selectedItem.size_3}: {selectedItem.price_3}</Subheading>
+                : null
+            }
             <View style={styles.subDetailView}>
-                <Image style={styles.bigPic} source={selectedItemPic} />
+                <Image style={styles.bigPic} source={selectedItem.pic} />
                 { isDescription ? <Headline style={styles.description}>{i18n.t('description')}</Headline> : null }
                 { isDescription ? <Text>{selectedDetail.description}</Text> : null }
             </View>

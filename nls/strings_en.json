@@ -41,7 +41,7 @@
     "drinks": "Drinks",
     
     "ch000_name": "ch000",
-    "ch000_price": "$2.99",
+    "ch000_price_1": "$2.99",
     "ch000_description": "",
     "ch000_calories": "200Cal",
     "ch000_totalFat": "20g",
@@ -51,7 +51,10 @@
     "ch000_protein": "20g",
 
     "ch001_name": "Drum stick",
-    "ch001_price": "Regular: $2.95\nJumbo: $3.63",
+    "ch001_size_1": "Regular",
+    "ch001_size_2": "Jumbo",
+    "ch001_price_1": "$2.95",
+    "ch001_price_2": "$3.63",
     "ch001_description": "--",
     "ch001_calories": "--",
     "ch001_totalFat": "--",
@@ -61,7 +64,10 @@
     "ch001_protein": "--",
 
     "ch002_name": "Thigh",
-    "ch002_price": "Regular: $3.63\nJumbo: $4.54",
+    "ch002_size_1": "Regular",
+    "ch002_size_2": "Jumbo",
+    "ch002_price_1": "$3.63",
+    "ch002_price_2": "$4.54",
     "ch002_description": "--",
     "ch002_calories": "--",
     "ch002_totalFat": "--",
@@ -71,7 +77,10 @@
     "ch002_protein": "--",
 
     "ch003_name": "Wing",
-    "ch003_price": "Regular: $2.95\nJumbo: $3.45",
+    "ch003_size_1": "Regular",
+    "ch003_size_2": "Jumbo",
+    "ch003_price_1": "$2.95",
+    "ch003_price_2": "$3.45",
     "ch003_description": "--",
     "ch003_calories": "--",
     "ch003_totalFat": "--",
@@ -81,7 +90,7 @@
     "ch003_protein": "--",
 
     "ch004_name": "Breast",
-    "ch004_price": "$9.99/lb",
+    "ch004_price_1": "$9.99/lb",
     "ch004_description": "--",
     "ch004_calories": "--",
     "ch004_totalFat": "--",
@@ -91,7 +100,7 @@
     "ch004_protein": "--",
 
     "ch005_name": "Strips",
-    "ch005_price": "$13.99/lb",
+    "ch005_price_1": "$13.99/lb",
     "ch005_description": "--",
     "ch005_calories": "--",
     "ch005_totalFat": "--",
@@ -101,7 +110,7 @@
     "ch005_protein": "--",
 
     "ch006_name": "Chicken stick",
-    "ch006_price": "$7.26",
+    "ch006_price_1": "$7.26",
     "ch006_description": "--",
     "ch006_calories": "--",
     "ch006_totalFat": "--",
@@ -111,7 +120,7 @@
     "ch006_protein": "--",
 
     "ch007_name": "Spicy hot stick",
-    "ch007_price": "$7.26",
+    "ch007_price_1": "$7.26",
     "ch007_description": "--",
     "ch007_calories": "--",
     "ch007_totalFat": "--",
@@ -121,7 +130,7 @@
     "ch007_protein": "--",
 
     "ch008_name": "Honey sesame stick",
-    "ch008_price": "$7.26",
+    "ch008_price_1": "$7.26",
     "ch008_description": "--",
     "ch008_calories": "--",
     "ch008_totalFat": "--",
@@ -131,7 +140,7 @@
     "ch008_protein": "--",
 
     "ch009_name": "Chicken nuggets (8 pcs)",
-    "ch009_price": "$6.80",
+    "ch009_price_1": "$6.80",
     "ch009_description": "--",
     "ch009_calories": "--",
     "ch009_totalFat": "--",
@@ -141,7 +150,7 @@
     "ch009_protein": "--",
 
     "ch010_name": "Chicken karage",
-    "ch010_price": "$10.99/lb",
+    "ch010_price_1": "$10.99/lb",
     "ch010_description": "--",
     "ch010_calories": "--",
     "ch010_totalFat": "--",
@@ -151,7 +160,7 @@
     "ch010_protein": "--",
 
     "ch011_name": "Chicken karage rice bowl",
-    "ch011_price": "$10.99",
+    "ch011_price_1": "$10.99",
     "ch011_description": "--",
     "ch011_calories": "--",
     "ch011_totalFat": "--",
@@ -161,7 +170,7 @@
     "ch011_protein": "--",
 
     "ch012_name": "Chicken special",
-    "ch012_price": "$11.99",
+    "ch012_price_1": "$11.99",
     "ch012_description": "Chicken strips (6-7 pcs), French fries, Fountain soda (small)",
     "ch012_calories": "--",
     "ch012_totalFat": "--",
@@ -171,7 +180,7 @@
     "ch012_protein": "--",
 
     "ce001_name": "Gizzards",
-    "ce001_price": "$9.99/lb",
+    "ce001_price_1": "$9.99/lb",
     "ce001_description": "--",
     "ce001_calories": "--",
     "ce001_totalFat": "--",
@@ -181,7 +190,7 @@
     "ce001_protein": "--",
 
     "ce002_name": "Livers",
-    "ce002_price": "$9.99/lb",
+    "ce002_price_1": "$9.99/lb",
     "ce002_description": "--",
     "ce002_calories": "--",
     "ce002_totalFat": "--",
@@ -191,7 +200,7 @@
     "ce002_protein": "--",
 
     "ce003_name": "Hearts",
-    "ce003_price": "$9.99/lb",
+    "ce003_price_1": "$9.99/lb",
     "ce003_description": "--",
     "ce003_calories": "--",
     "ce003_totalFat": "--",
@@ -201,7 +210,7 @@
     "ce003_protein": "--",
 
     "ce004_name": "Giblet sampler",
-    "ce004_price": "$4.54",
+    "ce004_price_1": "$4.54",
     "ce004_description": "Roughly 0.5lb of any combination of gizzards, livers, and hearts",
     "ce004_calories": "--",
     "ce004_totalFat": "--",
@@ -211,7 +220,7 @@
     "ce004_protein": "--",
 
     "sf001_name": "Tempura shrimps (5 pcs)",
-    "sf001_price": "$9.99",
+    "sf001_price_1": "$9.99",
     "sf001_description": "--",
     "sf001_calories": "--",
     "sf001_totalFat": "--",
@@ -221,7 +230,7 @@
     "sf001_protein": "--",
 
     "sf002_name": "Butterfly shrimps (5 pcs)",
-    "sf002_price": "$7.99",
+    "sf002_price_1": "$7.99",
     "sf002_description": "--",
     "sf002_calories": "--",
     "sf002_totalFat": "--",
@@ -231,7 +240,7 @@
     "sf002_protein": "--",
 
     "sf003_name": "Cod fish (3 pcs)",
-    "sf003_price": "$9.52",
+    "sf003_price_1": "$9.52",
     "sf003_description": "--",
     "sf003_calories": "--",
     "sf003_totalFat": "--",
@@ -241,7 +250,7 @@
     "sf003_protein": "--",
 
     "sf004_name": "Calamari (10 pcs)",
-    "sf004_price": "$7.99",
+    "sf004_price_1": "$7.99",
     "sf004_description": "--",
     "sf004_calories": "--",
     "sf004_totalFat": "--",
@@ -251,7 +260,7 @@
     "sf004_protein": "--",
 
     "sf005_name": "Seafood Sampler",
-    "sf005_price": "$9.99",
+    "sf005_price_1": "$9.99",
     "sf005_description": "Calamari (5 pcs), Butterfly shrimps (2 pcs), Tempura shrimps (2 pcs)",
     "sf005_calories": "--",
     "sf005_totalFat": "--",
@@ -261,7 +270,7 @@
     "sf005_protein": "--",
 
     "sf006_name": "Add fries",
-    "sf006_price": "$3.50",
+    "sf006_price_1": "$3.50",
     "sf006_description": "--",
     "sf006_calories": "--",
     "sf006_totalFat": "--",
@@ -271,7 +280,7 @@
     "sf006_protein": "--",
 
     "so001_name": "French fries",
-    "so001_price": "$3.63",
+    "so001_price_1": "$3.63",
     "so001_description": "--",
     "so001_calories": "--",
     "so001_totalFat": "--",
@@ -281,7 +290,7 @@
     "so001_protein": "--",
 
     "so002_name": "Corn dog",
-    "so002_price": "$3.63",
+    "so002_price_1": "$3.63",
     "so002_description": "--",
     "so002_calories": "--",
     "so002_totalFat": "--",
@@ -291,7 +300,7 @@
     "so002_protein": "--",
 
     "so003_name": "Steamed rice",
-    "so003_price": "$3.50",
+    "so003_price_1": "$3.50",
     "so003_description": "--",
     "so003_calories": "--",
     "so003_totalFat": "--",
@@ -301,7 +310,7 @@
     "so003_protein": "--",
 
     "so004_name": "Chicken fried rice",
-    "so004_price": "$8.49",
+    "so004_price_1": "$8.49",
     "so004_description": "--",
     "so004_calories": "--",
     "so004_totalFat": "--",
@@ -311,7 +320,7 @@
     "so004_protein": "--",
 
     "so005_name": "Crab rice ball",
-    "so005_price": "$5.00",
+    "so005_price_1": "$5.00",
     "so005_description": "--",
     "so005_calories": "--",
     "so005_totalFat": "--",
@@ -321,7 +330,7 @@
     "so005_protein": "--",
 
     "so006_name": "Spam Musubi",
-    "so006_price": "$4.08",
+    "so006_price_1": "$4.08",
     "so006_description": "--",
     "so006_calories": "--",
     "so006_totalFat": "--",
@@ -331,7 +340,7 @@
     "so006_protein": "--",
 
     "so007_name": "Crab cheese puffs (4 pcs)",
-    "so007_price": "$6.35",
+    "so007_price_1": "$6.35",
     "so007_description": "--",
     "so007_calories": "--",
     "so007_totalFat": "--",
@@ -341,7 +350,7 @@
     "so007_protein": "--",
 
     "so008_name": "Chicken egg rolls (2 pcs)",
-    "so008_price": "$5.99",
+    "so008_price_1": "$5.99",
     "so008_description": "--",
     "so008_calories": "--",
     "so008_totalFat": "--",
@@ -351,7 +360,7 @@
     "so008_protein": "--",
 
     "so009_name": "Mozzarella sticks (6 pcs)",
-    "so009_price": "$5.99",
+    "so009_price_1": "$5.99",
     "so009_description": "--",
     "so009_calories": "--",
     "so009_totalFat": "--",
@@ -361,7 +370,7 @@
     "so009_protein": "--",
 
     "so010_name": "Churro",
-    "so010_price": "$3.18",
+    "so010_price_1": "$3.18",
     "so010_description": "--",
     "so010_calories": "--",
     "so010_totalFat": "--",
@@ -371,7 +380,7 @@
     "so010_protein": "--",
 
     "sa001_name": "BBQ\nCocktail\nHoney mustard\nRanch\nSpicy\nSpicy mayo\nSweet and sour\nTartar\n",
-    "sa001_price": "$0.50",
+    "sa001_price_1": "$0.50",
     "sa001_description": "--",
     "sa001_calories": "--",
     "sa001_totalFat": "--",
@@ -381,7 +390,12 @@
     "sa001_protein": "--",
 
     "dr001_name": "Bottled water",
-    "dr001_price": "Small: $3.16\nMedium: $3.63\nLarge: $4.54",
+    "dr001_size_1": "Small",
+    "dr001_size_2": "Medium",
+    "dr001_size_3": "Large",
+    "dr001_price_1": "$3.16",
+    "dr001_price_2": "$3.63",
+    "dr001_price_3": "$4.54",
     "dr001_description": "--",
     "dr001_calories": "--",
     "dr001_totalFat": "--",
@@ -391,7 +405,7 @@
     "dr001_protein": "--",
 
     "dr002_name": "Bottled soda",
-    "dr002_price": "$3.63",
+    "dr002_price_1": "$3.63",
     "dr002_description": "--",
     "dr002_calories": "--",
     "dr002_totalFat": "--",
@@ -401,7 +415,7 @@
     "dr002_protein": "--",
 
     "dr003_name": "Canned soda",
-    "dr003_price": "$2.50",
+    "dr003_price_1": "$2.50",
     "dr003_description": "--",
     "dr003_calories": "--",
     "dr003_totalFat": "--",
@@ -411,7 +425,10 @@
     "dr003_protein": "--",
 
     "dr004_name": "Fountain soda",
-    "dr004_price": "Regular: $4.08\nLarge: $4.54",
+    "dr004_size_1": "Regular",
+    "dr004_size_2": "Large",
+    "dr004_price_1": "$4.08",
+    "dr004_price_2": " $4.54",
     "dr004_description": "--",
     "dr004_calories": "--",
     "dr004_totalFat": "--",
@@ -421,7 +438,10 @@
     "dr004_protein": "--",
 
     "dr005_name": "Lemonade\nPink lemonade\nStrawberry lemonade",
-    "dr005_price": "Regular: $4.08\nLarge: $4.54",
+    "dr005_size_1": "Regular",
+    "dr005_size_2": "Large",
+    "dr005_price_1": "$4.08",
+    "dr005_price_2": "$4.54",
     "dr005_description": "--",
     "dr005_calories": "--",
     "dr005_totalFat": "--",
