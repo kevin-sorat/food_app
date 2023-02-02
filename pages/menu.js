@@ -313,10 +313,12 @@ const styles = StyleSheet.create({
     priceContainer: {
         flexDirection: 'column',
         flex: 0.4,
+        marginTop: -10,
     },
     priceSubcontainer: {
         flexDirection: 'row',
         flex: 1,
+        marginTop: 10,
     },
     price: {
         color: '#E6E6E6',
@@ -326,7 +328,7 @@ const styles = StyleSheet.create({
     },
     addButton: {
         flex: 0.1,
-        alignSelf: 'flex-end',
+        // alignSelf: 'flex-end',
         minWidth: 32,
         alignItems: 'baseline',
     },
