@@ -5,7 +5,7 @@ import * as Linking from 'expo-linking';
 import i18n from 'i18n-js';
 
 const address = '1507 Pike Pl, Seattle, WA 98101';
-const phoneNumber = '(360) 347-7608';
+const phoneNumber = '(206) 485-7180';
 const businessHours = '9:00 am - 4:30 pm';
 const weekendBusinessHours = '9:00 am - 5:00 pm';
 
