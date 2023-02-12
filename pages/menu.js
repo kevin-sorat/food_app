@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Animated, StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, SectionList, StatusBar, Modal, View } from 'react-native';
-import { Headline, Subheading, Button } from 'react-native-paper';
+import React, { useState, useEffect } from 'react';
+import { Animated, StyleSheet, Text, TouchableOpacity, Image, SafeAreaView, StatusBar, Modal, View } from 'react-native';
+import { Button } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
 import { getDetailPage } from './detail.js';
 import { getBagPage } from './bag.js';
+import { calculateNumItemsAndPrice } from '../utils/helper.js';
 import i18n from 'i18n-js';
 // import chicken from '../assets/800px_COLOURBOX9177179.jpeg';
 
@@ -12,18 +13,49 @@ const HEADER_MAX_HEIGHT = 180;
 const HEADER_MIN_HEIGHT = 90;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
-export function getMenuPage(parsedUrl) {
+export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
     const isOrder = (parsedUrl && parsedUrl.queryParams && parsedUrl.queryParams.order === "true");
     const [detailModalVisible, setDetailModalVisible] = useState(false);
     const [bagModalVisible, setBagModalVisible] = useState(false);
     const [selectedItem, setSelectedItem] = useState('');
-    const [scrollY, setScrollY] = useState(new Animated.Value(0));
+
+    let result = calculateNumItemsAndPrice(shoppingBag);
+    const [numItems, setNumItems] = useState(result.numItems);
+    const [totalPrice, setTotalPrice] = useState(result.totalPrice);
+    const [scrollY] = useState(new Animated.Value(0));
+
+    useEffect(() => {
+        let result = calculateNumItemsAndPrice(shoppingBag);
+        setNumItems(result.numItems);
+        setTotalPrice(result.totalPrice);
+    });
 
     const headerHeight = scrollY.interpolate({
         inputRange: [0, HEADER_SCROLL_DISTANCE],
         outputRange: [HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
         extrapolate: 'clamp',
     });
+
+    function addItemToBag(shoppingBag, item, selectedPrice, selectedSize) {
+        let obj = shoppingBag.find(o => o.id === item.id && o.size === selectedSize);
+        if (obj) {
+            obj.quantity++;
+        } else {
+            let addedItem = {
+                id: item.id,
+                name: item.name,
+                size: selectedSize,
+                price: selectedPrice,
+                pic: item.pic,
+                quantity: 1
+            }
+            shoppingBag.push(addedItem);
+        }
+
+        let result = calculateNumItemsAndPrice(shoppingBag);
+        setNumItems(result.numItems);
+        setTotalPrice(result.totalPrice);
+    }
 
     const Item = ({ title }) => (
         <TouchableOpacity style={styles.item} onPress={() => {
@@ -35,9 +67,10 @@ export function getMenuPage(parsedUrl) {
             { title.price_1 && !title.price_2
                 ?  <View style={styles.priceContainer}>
                         <View style={styles.priceSubcontainer}>
-                            <Text style={styles.price}>{title.price_1}</Text>
+                            <Text style={styles.price}>${title.price_1.toFixed(2)}</Text>
                             { isOrder
-                                ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF" onPress={() => setBagModalVisible(true)}/>
+                                ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
+                                    onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}/>
                                 : null
                             }
                         </View>
@@ -47,16 +80,18 @@ export function getMenuPage(parsedUrl) {
             { title.price_1 && title.price_2 && !title.price_3
                 ? <View style={styles.priceContainer}>
                     <View style={styles.priceSubcontainer}>
-                        <Text style={styles.price}>{title.size_1}: {title.price_1}</Text>
+                        <Text style={styles.price}>{title.size_1}: ${title.price_1.toFixed(2)}</Text>
                         { isOrder
-                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF" onPress={() => setBagModalVisible(true)}/>
+                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}/>
                             : null
                         }
                     </View>
                     <View style={styles.priceSubcontainer}>
-                        <Text style={styles.price}>{title.size_2}: {title.price_2}</Text>
+                        <Text style={styles.price}>{title.size_2}: ${title.price_2.toFixed(2)}</Text>
                         { isOrder
-                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF" onPress={() => setBagModalVisible(true)}/>
+                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}/>
                             : null
                         }
                     </View>
@@ -66,23 +101,26 @@ export function getMenuPage(parsedUrl) {
             { title.price_1 && title.price_2 && title.price_3
                 ? <View style={styles.priceContainer}>
                     <View style={styles.priceSubcontainer}>
-                        <Text style={styles.price}>{title.size_1}: {title.price_1}</Text>
+                        <Text style={styles.price}>{title.size_1}: ${title.price_1.toFixed(2)}</Text>
                         { isOrder
-                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF" onPress={() => setBagModalVisible(true)}/>
+                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}/>
                             : null
                         }
                     </View>
                     <View style={styles.priceSubcontainer}>
-                        <Text style={styles.price}>{title.size_2}: {title.price_2}</Text>
+                        <Text style={styles.price}>{title.size_2}: ${title.price_2.toFixed(2)}</Text>
                         { isOrder
-                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF" onPress={() => setBagModalVisible(true)}/>
+                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}/>
                             : null
                         }
                     </View>
                     <View style={styles.priceSubcontainer}>
-                        <Text style={styles.price}>{title.size_3}: {title.price_3}</Text>
+                        <Text style={styles.price}>{title.size_3}: ${title.price_3.toFixed(2)}</Text>
                         { isOrder
-                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF" onPress={() => setBagModalVisible(true)}/>
+                            ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_3, title.size_3)}/>
                             : null
                         }
                     </View>
@@ -100,12 +138,12 @@ export function getMenuPage(parsedUrl) {
                 {id: 'ch002', name: i18n.t('ch002_name'), size_1: i18n.t('ch002_size_1'), size_2: i18n.t('ch002_size_2'), price_1: i18n.t('ch002_price_1'), price_2: i18n.t('ch002_price_2'), pic: require('../assets/chicken_thigh.png')},
                 {id: 'ch003', name: i18n.t('ch003_name'), size_1: i18n.t('ch003_size_1'), size_2: i18n.t('ch003_size_2'), price_1: i18n.t('ch003_price_1'), price_2: i18n.t('ch003_price_2'), pic: require('../assets/chicken_wing.png')},
                 // {id: 'ch004', name: i18n.t('ch004_name'), price_1: i18n.t('ch004_price_1'), pic: require('../assets/800px_COLOURBOX8625292.jpeg')},
-                {id: 'ch005', name: i18n.t('ch005_name'), price_1: i18n.t('ch005_price_1'), pic: require('../assets/chicken_strips.png')},
+                {id: 'ch005', name: i18n.t('ch005_name'), size_1: i18n.t('ch005_size_1'), size_2: i18n.t('ch005_size_2'), price_1: i18n.t('ch005_price_1'), price_2: i18n.t('ch005_price_2'), pic: require('../assets/chicken_strips.png')},
                 {id: 'ch006', name: i18n.t('ch006_name'), price_1: i18n.t('ch006_price_1'), pic: require('../assets/chicken_stick.png')},
                 {id: 'ch007', name: i18n.t('ch007_name'), price_1: i18n.t('ch007_price_1'), pic: require('../assets/chicken_spicy_stick.png')},
                 {id: 'ch008', name: i18n.t('ch008_name'), price_1: i18n.t('ch008_price_1'), pic: require('../assets/chicken_sesame_stick.png')},
                 {id: 'ch009', name: i18n.t('ch009_name'), price_1: i18n.t('ch009_price_1'), pic: require('../assets/chicken_nuggets.png')},
-                {id: 'ch010', name: i18n.t('ch010_name'), price_1: i18n.t('ch010_price_1'), pic: require('../assets/chicken_karage.png')},
+                {id: 'ch010', name: i18n.t('ch010_name'), size_1: i18n.t('ch010_size_1'), size_2: i18n.t('ch010_size_2'), price_1: i18n.t('ch010_price_1'), price_2: i18n.t('ch010_price_2'), pic: require('../assets/chicken_karage.png')},
                 {id: 'ch011', name: i18n.t('ch011_name'), price_1: i18n.t('ch011_price_1'), pic: require('../assets/chicken_karage_rice_bowl.png')},
                 {id: 'ch012', name: i18n.t('ch012_name'), price_1: i18n.t('ch012_price_1'), pic: require('../assets/chicken_special.png')},
             ]
@@ -113,9 +151,9 @@ export function getMenuPage(parsedUrl) {
         {
             title: i18n.t('chickenEtc'),
             data: [
-                {id: 'ce001', name: i18n.t('ce001_name'), price_1: i18n.t('ce001_price_1'), pic: require('../assets/chicken_gizzards.png')},
-                {id: 'ce002', name: i18n.t('ce002_name'), price_1: i18n.t('ce002_price_1'), pic: require('../assets/chicken_livers.png')},
-                {id: 'ce003', name: i18n.t('ce003_name'), price_1: i18n.t('ce003_price_1'), pic: require('../assets/chicken_hearts.png')},
+                {id: 'ce001', name: i18n.t('ce001_name'), size_1: i18n.t('ce001_size_1'), size_2: i18n.t('ce001_size_2'), price_1: i18n.t('ce001_price_1'), price_2: i18n.t('ce001_price_2'), pic: require('../assets/chicken_gizzards.png')},
+                {id: 'ce002', name: i18n.t('ce002_name'), size_1: i18n.t('ce002_size_1'), size_2: i18n.t('ce002_size_2'), price_1: i18n.t('ce002_price_1'), price_2: i18n.t('ce002_price_2'), pic: require('../assets/chicken_livers.png')},
+                {id: 'ce003', name: i18n.t('ce003_name'), size_1: i18n.t('ce003_size_1'), size_2: i18n.t('ce003_size_2'), price_1: i18n.t('ce003_price_1'), price_2: i18n.t('ce003_price_2'), pic: require('../assets/chicken_hearts.png')},
                 {id: 'ce004', name: i18n.t('ce004_name'), price_1: i18n.t('ce004_price_1'), pic: require('../assets/giblet_sampler.png')},
             ]
         },
@@ -163,9 +201,6 @@ export function getMenuPage(parsedUrl) {
         },
     ];
 
-    let numItems = 0;
-    let totalPrice = 0;
-
     return (
         <SafeAreaView style={styles.container}>
             <Modal
@@ -194,7 +229,7 @@ export function getMenuPage(parsedUrl) {
             >
                 <SafeAreaView style={styles.modalView}>
                     <AntDesign style={styles.closeButton} name='closecircleo' size={32} color='black' onPress={() => setBagModalVisible(!bagModalVisible)} />
-                    {getBagPage()}
+                    {getBagPage(shoppingBag, setShoppingBag)}
                 </SafeAreaView>
             </Modal>
 
@@ -202,8 +237,8 @@ export function getMenuPage(parsedUrl) {
                 { isOrder
                     ?   <View style={styles.bagContainer}>
                             <View style={styles.amountContainer}>
-                                <Text style={styles.bagLabel}>No. of Items : {numItems}</Text>
-                                <Text style={styles.bagLabel}>Price : ${totalPrice}</Text>
+                                <Text style={styles.bagLabel}>Items: {numItems}</Text>
+                                <Text style={styles.bagLabel}>Total: ${totalPrice.toFixed(2)}</Text>
                             </View>
                             <Button style={styles.bagButton} icon='basket' color="#FFFFFF" labelStyle={{fontSize: 20}} onPress={() => setBagModalVisible(true)}/>
                         </View>
@@ -273,7 +308,7 @@ const styles = StyleSheet.create({
     },
     bagButton: {
         marginLeft: -6,
-        marginRight: -20,
+        marginRight: -26,
         flex: 0.3,
     },
     bigPic: {

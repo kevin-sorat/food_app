@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, SafeAreaView, Dimensions, View, Button } from 'react-native';
-import { Headline, Subheading } from 'react-native-paper';
+import React from 'react';
+import { StyleSheet, SafeAreaView, View, Button } from 'react-native';
+import { Headline } from 'react-native-paper';
 import {Picker} from '@react-native-picker/picker';
 import i18n from 'i18n-js';
 
@@ -32,7 +32,7 @@ export function getTranslatePage() {
             <Picker.Item label='Española' value='es' />
           </Picker>
           <View style={styles.toolbar}>
-            <Button style={styles.applyButton} title={i18n.t('apply')} 
+            <Button title={i18n.t('apply')} 
                 onPress={_handlePressDone} disabled={highlightedLanguage === selectedLanguage} />
           </View>
         </SafeAreaView>

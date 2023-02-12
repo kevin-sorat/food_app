@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet } from 'react-native';
-import { BottomNavigation, Text } from 'react-native-paper';
+import { BottomNavigation } from 'react-native-paper';
 import { getHomePage } from './pages/home.js';
 import { getMenuPage } from './pages/menu.js';
 import { getTranslatePage } from './pages/translate.js';
@@ -53,6 +52,7 @@ const MainComponent = () => {
   //console.log("MainComponent: i18n.locale: " + i18n.locale);
   //console.log("MainComponent: i18n.t('home'): " + i18n.t('home'));
 
+  const [shoppingBag, setShoppingBag] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.locale);
   const { url: initialUrl, processing } = useInitialURL();
   console.log("The deep link is: " + initialUrl);
@@ -81,7 +81,7 @@ const MainComponent = () => {
   ];
 
   const HomeRoute = () => getHomePage();
-  const MenuRoute = () => getMenuPage(parsedUrl);
+  const MenuRoute = () => getMenuPage(parsedUrl, shoppingBag, setShoppingBag);
   const TranslateRoute = () => getTranslatePage();
   const MoreRoute = () => getMorePage();
 

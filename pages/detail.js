@@ -26,19 +26,19 @@ export function getDetailPage(selectedItem) {
         <ScrollView style={styles.detailView}>
             <Headline>{selectedItem.name}</Headline>
             { !selectedItem.size_1 && selectedItem.price_1
-                ? <Subheading>{selectedItem.price_1}</Subheading>
+                ? <Subheading>${selectedItem.price_1}</Subheading>
                 : null
             }
             { selectedItem.size_1 && selectedItem.price_1
-                ? <Subheading>{selectedItem.size_1}: {selectedItem.price_1}</Subheading>
+                ? <Subheading>{selectedItem.size_1}: ${selectedItem.price_1}</Subheading>
                 : null
             }
             { selectedItem.size_2 && selectedItem.price_2
-                ? <Subheading>{selectedItem.size_2}: {selectedItem.price_2}</Subheading>
+                ? <Subheading>{selectedItem.size_2}: ${selectedItem.price_2}</Subheading>
                 : null
             }
             { selectedItem.size_3 && selectedItem.price_3
-                ? <Subheading>{selectedItem.size_3}: {selectedItem.price_3}</Subheading>
+                ? <Subheading>{selectedItem.size_3}: ${selectedItem.price_3}</Subheading>
                 : null
             }
             <View style={styles.subDetailView}>
