@@ -37,12 +37,12 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
     });
 
     function addItemToBag(shoppingBag, item, selectedPrice, selectedSize) {
-        let obj = shoppingBag.find(o => o.id === item.id && o.size === selectedSize);
+        let obj = shoppingBag.find(o => (o.id + selectedSize) === item.id);
         if (obj) {
             obj.quantity++;
         } else {
             let addedItem = {
-                id: item.id,
+                id: item.id + selectedSize,
                 name: item.name,
                 size: selectedSize,
                 price: selectedPrice,
