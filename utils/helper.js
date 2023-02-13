@@ -1,3 +1,4 @@
+const MAX_NUM_ITEMS = 10;
 
 export function calculateNumItemsAndPrice(shoppingBag) {
     let result = {
@@ -9,4 +10,15 @@ export function calculateNumItemsAndPrice(shoppingBag) {
         result.totalPrice = result.totalPrice + (shoppingBag[i].quantity * shoppingBag[i].price);
     }
     return result;
+}
+
+export function isMaxAllowedNumItems(shoppingBag, itemId, itemSize) {
+    for (let i in shoppingBag) {
+        if (shoppingBag[i].id === itemId &&
+            shoppingBag[i].size === itemSize &&
+            shoppingBag[i].quantity >= MAX_NUM_ITEMS) {
+            return true;
+        }
+    }
+    return false;
 }

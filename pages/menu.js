@@ -4,7 +4,7 @@ import { Button } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
 import { getDetailPage } from './detail.js';
 import { getBagPage } from './bag.js';
-import { calculateNumItemsAndPrice } from '../utils/helper.js';
+import { calculateNumItemsAndPrice, isMaxAllowedNumItems } from '../utils/helper.js';
 import i18n from 'i18n-js';
 // import chicken from '../assets/800px_COLOURBOX9177179.jpeg';
 
@@ -70,7 +70,8 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                             <Text style={styles.price}>${title.price_1.toFixed(2)}</Text>
                             { isOrder
                                 ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
-                                    onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}/>
+                                    onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}
+                                    disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_1)}/>
                                 : null
                             }
                         </View>
@@ -83,7 +84,8 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         <Text style={styles.price}>{title.size_1}: ${title.price_1.toFixed(2)}</Text>
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
-                                onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}/>
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_1)}/>
                             : null
                         }
                     </View>
@@ -91,7 +93,8 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         <Text style={styles.price}>{title.size_2}: ${title.price_2.toFixed(2)}</Text>
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
-                                onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}/>
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_2)}/>
                             : null
                         }
                     </View>
@@ -104,7 +107,8 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         <Text style={styles.price}>{title.size_1}: ${title.price_1.toFixed(2)}</Text>
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
-                                onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}/>
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_1)}/>
                             : null
                         }
                     </View>
@@ -112,7 +116,8 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         <Text style={styles.price}>{title.size_2}: ${title.price_2.toFixed(2)}</Text>
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
-                                onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}/>
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_2)}/>
                             : null
                         }
                     </View>
@@ -120,7 +125,8 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         <Text style={styles.price}>{title.size_3}: ${title.price_3.toFixed(2)}</Text>
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
-                                onPress={() => addItemToBag(shoppingBag, title, title.price_3, title.size_3)}/>
+                                onPress={() => addItemToBag(shoppingBag, title, title.price_3, title.size_3)}
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_3)}/>
                             : null
                         }
                     </View>
