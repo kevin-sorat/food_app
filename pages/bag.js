@@ -71,10 +71,11 @@ export function getBagPage(shoppingBag, setShoppingBag) {
                 </View>
             }
             <View style={styles.bagBottomContainer}>
-                <Subheading style={styles.bottomText}>Subtotal</Subheading>
-                <Text style={styles.bottomText}>{"$" + totalPrice.toFixed(2)}</Text>
+                <Subheading style={styles.bottomText1}>Subtotal</Subheading>
+                <Text style={styles.bottomText2}>{"$" + totalPrice.toFixed(2)}</Text>
                 <View style={styles.bagButtonContainer}>
-                    <Button style={styles.checkoutButton} mode='contained' disabled={true}>
+                    <Button style={styles.checkoutButton} mode='contained'
+                        disabled={true}>
                         checkout
                     </Button>
                     <Button style={styles.trashButton} icon='trash-can' labelStyle={{fontSize: 20}}
@@ -109,22 +110,33 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     bagViewContent: {
-        flex: 0.7,
+        flex: 0.6,
         padding: 10,
         alignItems: 'center',
         marginTop: 80,
     },
     bagBottomContainer: {
-        flex: 0.3,
+        flex: 0.4,
         padding: 10,
+        borderStyle: 'dotted',
+        borderWidth: 1,
+        backgroundColor: '#a74545',
     },
-    bottomText: {
+    bottomText1: {
         textAlign: 'center',
         fontWeight: '500',
         fontSize: 16,
+        color: '#fff',
+        marginTop: 10,
+    },
+    bottomText2: {
+        textAlign: 'center',
+        fontWeight: '500',
+        fontSize: 16,
+        color: '#fff',
     },
     bagButtonContainer: {
-        paddingTop: 30,
+        paddingTop: 24,
         alignItems: 'center'
     },
     checkoutButton: {

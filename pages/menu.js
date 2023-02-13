@@ -353,7 +353,7 @@ const styles = StyleSheet.create({
     priceSubcontainer: {
         flexDirection: 'row',
         flex: 1,
-        marginTop: 10,
+        marginTop: 16,
     },
     price: {
         color: '#E6E6E6',
@@ -365,6 +365,7 @@ const styles = StyleSheet.create({
         flex: 0.1,
         // alignSelf: 'flex-end',
         minWidth: 32,
+        minHeight: 24,
         alignItems: 'baseline',
     },
     header: {
