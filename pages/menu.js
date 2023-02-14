@@ -37,7 +37,7 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
     });
 
     function addItemToBag(shoppingBag, item, selectedPrice, selectedSize) {
-        let obj = shoppingBag.find(o => (o.id + selectedSize) === item.id);
+        let obj = shoppingBag.find(o => o.id === (item.id + selectedSize));
         if (obj) {
             obj.quantity++;
         } else {
@@ -65,27 +65,27 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
             <Image style={styles.smallPic} source={title.pic} />
             <Text style={styles.name}>{title.name}</Text>
             { title.price_1 && !title.price_2
-                ?  <View style={styles.priceContainer}>
+                ?  <TouchableOpacity style={styles.priceContainer}>
                         <View style={styles.priceSubcontainer}>
                             <Text style={styles.price}>${title.price_1.toFixed(2)}</Text>
                             { isOrder
                                 ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
                                     onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}
-                                    disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_1)}/>
+                                    disabled={isMaxAllowedNumItems(shoppingBag, title.id+title.size_1)}/>
                                 : null
                             }
                         </View>
-                </View> 
+                </TouchableOpacity> 
                 : null
             }
             { title.price_1 && title.price_2 && !title.price_3
-                ? <View style={styles.priceContainer}>
+                ? <TouchableOpacity style={styles.priceContainer}>
                     <View style={styles.priceSubcontainer}>
                         <Text style={styles.price}>{title.size_1}: ${title.price_1.toFixed(2)}</Text>
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
                                 onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}
-                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_1)}/>
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id+title.size_1)}/>
                             : null
                         }
                     </View>
@@ -94,21 +94,21 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
                                 onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}
-                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_2)}/>
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id+title.size_2)}/>
                             : null
                         }
                     </View>
-                </View>
+                </TouchableOpacity>
                 : null
             }
             { title.price_1 && title.price_2 && title.price_3
-                ? <View style={styles.priceContainer}>
+                ? <TouchableOpacity style={styles.priceContainer}>
                     <View style={styles.priceSubcontainer}>
                         <Text style={styles.price}>{title.size_1}: ${title.price_1.toFixed(2)}</Text>
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
                                 onPress={() => addItemToBag(shoppingBag, title, title.price_1, title.size_1)}
-                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_1)}/>
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id+title.size_1)}/>
                             : null
                         }
                     </View>
@@ -117,7 +117,7 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
                                 onPress={() => addItemToBag(shoppingBag, title, title.price_2, title.size_2)}
-                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_2)}/>
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id+title.size_2)}/>
                             : null
                         }
                     </View>
@@ -126,11 +126,11 @@ export function getMenuPage(parsedUrl, shoppingBag, setShoppingBag) {
                         { isOrder
                             ? <Button style={styles.addButton} icon='plus-circle' color="#FFFFFF"
                                 onPress={() => addItemToBag(shoppingBag, title, title.price_3, title.size_3)}
-                                disabled={isMaxAllowedNumItems(shoppingBag, title.id, title.size_3)}/>
+                                disabled={isMaxAllowedNumItems(shoppingBag, title.id+title.size_3)}/>
                             : null
                         }
                     </View>
-                </View>
+                </TouchableOpacity>
                 : null
             }
         </TouchableOpacity>

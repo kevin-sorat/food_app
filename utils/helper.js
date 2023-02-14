@@ -12,10 +12,9 @@ export function calculateNumItemsAndPrice(shoppingBag) {
     return result;
 }
 
-export function isMaxAllowedNumItems(shoppingBag, itemId, itemSize) {
+export function isMaxAllowedNumItems(shoppingBag, itemId) {
     for (let i in shoppingBag) {
         if (shoppingBag[i].id === itemId &&
-            shoppingBag[i].size === itemSize &&
             shoppingBag[i].quantity >= MAX_NUM_ITEMS) {
             return true;
         }
